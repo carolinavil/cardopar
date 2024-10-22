@@ -1,0 +1,491 @@
+<section class=" sobre-nos" data-aos="fade-up">
+    <div class="container-alinhado">
+        <div class="caixa-textos" >
+            <h1 class="titulo-caixas">Sobre nós</h1>
+
+            <p class="texto-caixas texto-sobre-nos">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan
+                arcu. Nulla facilisi. Cras nec erat fringilla, vehicula libero non, luctus risus. Donec euismod dui et
+                arcu congue, in varius risus venenatis. Integer a cursus augue. Aenean dictum suscipit lorem, vel
+                feugiat nulla dapibus ut. Sed sed risus libero. Suspendisse fermentum malesuada ligula, id sollicitudin
+                turpis i
+            </p>
+
+            <button class="btn-acao">Lorem Ipsum</button>
+        </div>
+    </div>
+
+    <!-- 
+  <div class="caixa-imagem">
+    <img src="../../assets/img/img-desktops .svg" alt="" class="imagem-sobre-nos">
+  </div> -->
+
+</section>
+<section class="passos" data-aos="fade-up">
+    <div class="container-alinhado">
+        <div class="caixa-textos">
+        
+            <div class="titulos-caixa">
+                <h1 class="titulo-caixas">Iniciando seu atendimento</h1>
+                <h2 class="subtitulo-caixas">
+                    Dream here. Develop here. Dream here. Develop here.
+                </h2>
+            </div>
+
+            <div class="step-container-desktop">
+                <button (click)="selectStep(1)" class="btn-passo" [ngClass]="{'active': currentStep === 1}"><span class="numero-passo">1</span> Iniciando seu atendimento</button>
+                <button (click)="selectStep(2)" class="btn-passo" [ngClass]="{'active': currentStep === 2}"><span class="numero-passo">1</span>Iniciando seu atendimento</button>
+                <button (click)="selectStep(3)" class="btn-passo" [ngClass]="{'active': currentStep === 3}"><span class="numero-passo">1</span>Iniciando seu atendimento</button>
+            </div>
+        </div>
+
+
+        <div class="passos-flex">
+    <div class="content">
+        <div *ngIf="currentStep === 1" class="passo-item">
+
+            <div class="titulo-passo">1- Iniciando seu atendimento</div>
+            <div class="caixa-passo">
+                <div class="img-passo">
+                    <img src="../../assets/img/Icon_Nuvem1 1.svg" alt="" loading="lazy">
+                </div>
+
+                <div class="texto-passo">
+                    Dream here. Develop here. Dream here. Develop here. Dream here. Develop here. Learn here. Dream
+                    here. Develop here. Dream here. Develop here.
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="currentStep === 2" class="passo-item">
+            <div class="titulo-passo">1- Iniciando seu atendimento</div>
+            <div class="caixa-passo">
+                <div class="img-passo">
+                    <img src="../../assets/img/Icon_Nuvem1 1.svg" alt="" loading="lazy">
+                </div>
+
+                <div class="texto-passo">
+                    Dream here. Develop here. Dream here. Develop here. Dream here. Develop here. Learn here. Dream
+                    here. Develop here. Dream here. Develop here.
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="currentStep === 3" class="passo-item">
+            <div class="titulo-passo">1- Iniciando seu atendimento</div>
+            <div class="caixa-passo">
+                <div class="img-passo">
+                    <img src="../../assets/img/Icon_Nuvem1 1.svg" alt="" loading="lazy">
+                </div>
+
+                <div class="texto-passo">
+                    Dream here. Develop here. Dream here. Develop here. Dream here. Develop here. Learn here. Dream
+                    here. Develop here. Dream here. Develop here.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="step-container step-container-passo">
+        <button (click)="selectStep(1)" class="btn-passo" [ngClass]="{'active': currentStep === 1}">1</button>
+        <button (click)="selectStep(2)" class="btn-passo" [ngClass]="{'active': currentStep === 2}">2</button>
+        <button (click)="selectStep(3)" class="btn-passo" [ngClass]="{'active': currentStep === 3}">3</button>
+    </div>
+
+ 
+
+</div>
+  
+
+
+    </div>
+    <div class="btn-acao-centro">
+        <button class="btn-acao">Lorem Ipsum</button>
+    </div>
+
+</section>
+
+
+<section class="diferenciais" data-aos="fade-up">
+    <div class="container-alinhado">
+        <div class="caixa-textos">
+            <div class="titulos-caixa">
+                <h1 class="titulo-caixas">Nossos diferenciais</h1>
+                <p class="subtitulo-caixas">Dream here. Develop here. Dream here. Develop here. Dream here. Develop here. Learn here. Dream here. Develop here. Dream here. Develop here.</p>
+            </div>
+         
+
+        </div>
+
+        <div class="lista-diferenciais">
+            <div class="diferencial">
+                <div class="titulo-diferencial">
+                    <div class="icone-diferencial">1</div>
+                    <div class="escrito-titulo-diferencial">DIFERENCIAL</div>
+                </div>
+                <div class="sublista-diferencial">
+                    <ul class="sublista-itens">
+                        <li class="sublista-item">
+                            <p class="sublista-texto">Developed</p>
+                        </li>
+                        <li class="sublista-item">
+                            <p class="sublista-texto">Developed</p>
+                        </li>
+                        <li class="sublista-item">
+                            <p class="sublista-texto">Developed</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="diferencial">
+                <div class="titulo-diferencial">
+                    <div class="icone-diferencial">1</div>
+                    <div class="escrito-titulo-diferencial">DIFERENCIAL</div>
+                </div>
+                <div class="sublista-diferencial">
+                    <ul class="sublista-itens">
+                        <li class="sublista-item">
+                            <p class="sublista-texto">Developed</p>
+                        </li>
+                        <li class="sublista-item">
+                            <p class="sublista-texto">Developed</p>
+                        </li>
+                        <li class="sublista-item">
+                            <p class="sublista-texto">Developed</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="diferencial">
+                <div class="titulo-diferencial">
+                    <div class="icone-diferencial">1</div>
+                    <div class="escrito-titulo-diferencial">DIFERENCIAL</div>
+                </div>
+                <div class="sublista-diferencial">
+                    <ul class="sublista-itens">
+                        <li class="sublista-item">
+                            <p class="sublista-texto">Developed</p>
+                        </li>
+                        <li class="sublista-item">
+                            <p class="sublista-texto">Developed</p>
+                        </li>
+                        <li class="sublista-item">
+                            <p class="sublista-texto">Developed</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="btn-acao-centro">
+            <button class="btn-acao">Lorem Ipsum</button>
+        </div>
+    </div>
+</section>
+
+<section class="servicos" data-aos="fade-up">
+    <div class="container-alinhado">
+        <div class="caixa-textos">
+            <div class="titulos-caixa">
+                <h1 class="titulo-caixas">Nossos principais serviços</h1>
+                <h2 class="subtitulo-caixas">
+                    Dream here. Develop here. Dream here. Develop here.
+                </h2>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="conteudo-principais-servicos">
+        <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig"
+            class="step-container container-btn-passos">
+            <button ngxSlickItem class="slide" (click)="selectStep(1)" class="btn-servicos"
+                [ngClass]="{'active-servicos': currentStep === 1}">Product documentation
+            </button>
+            <button ngxSlickItem class="slide" (click)="selectStep(2)" class="btn-servicos"
+                [ngClass]="{'active-servicos': currentStep === 2}">Product documentation
+            </button>
+            <button ngxSlickItem class="slide" (click)="selectStep(3)" class="btn-servicos"
+                [ngClass]="{'active-servicos': currentStep === 3}">E-mail</button>
+        </ngx-slick-carousel>
+
+        <div class="container-alinhado">
+            <div class="content">
+                <div *ngIf="currentStep === 1" class="passo-item">
+                    <div class="back-caixa-servico caixa-um">
+
+                    </div>
+                    <div class="textos-caixa-servico">
+                        <h1 class="titulo-caixa-servico">
+                            Especialistas em WordPress
+                        </h1>
+                        <p class="texto-caixas">Implementamos medidas de segurança robustas para p
+                            roteger seus dados e garantir sua privacidade absoluta na internet.</p>
+                        <button class="btn-acao">Lorem Ipsum</button>
+                    </div>
+                </div>
+
+                <div *ngIf="currentStep === 2" class="passo-item">
+                    <div class="back-caixa-servico caixa-um">
+
+                    </div>
+                    <div class="textos-caixa-servico">
+                        <h1 class="titulo-caixa-servico">
+                            Especialistas em WordPress
+                        </h1>
+                        <p class="texto-caixas">Implementamos medidas de segurança robustas para p
+                            roteger seus dados e garantir sua privacidade absoluta na internet.</p>
+                        <button class="btn-acao">Lorem Ipsum</button>
+                    </div>
+                </div>
+
+                <div *ngIf="currentStep === 3" class="passo-item">
+                    <div class="back-caixa-servico caixa-um">
+
+                    </div>
+                    <div class="textos-caixa-servico">
+                        <h1 class="titulo-caixa-servico">
+                            Especialistas em WordPress
+                        </h1>
+                        <p class="texto-caixas">Implementamos medidas de segurança robustas para p
+                            roteger seus dados e garantir sua privacidade absoluta na internet.</p>
+                        <button class="btn-acao">Lorem Ipsum</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-alinhado">
+        <div class="titulos-caixa">
+        <div class="caixa-textos">
+            <h1 class="titulo-caixas titulo-contato">Outros serviços</h1>
+           
+        </div>
+             
+    </div>
+    </div>
+    <div class="outros-servicos">
+        <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig"
+            class="step-container step-container-geral container-btn-passos">
+
+
+            <div ngxSlickItem class="slide slide-servico" style="background-image: url('assets/img1.jpg')">
+                <h3>Texto do Slide 1</h3>
+            </div>
+            <div ngxSlickItem class="slide slide-servico" style="background-image: url('assets/img2.jpg')">
+                <h3>Texto do Slide 2</h3>
+            </div>
+
+            <div ngxSlickItem class="slide slide-servico">
+                <h3>Texto do Slide 1</h3>
+            </div>
+
+            
+            <div ngxSlickItem class="slide slide-servico">
+                <h3>Texto do Slide 1</h3>
+            </div>
+
+            
+            <div ngxSlickItem class="slide slide-servico">
+                <h3>Texto do Slide 1</h3>
+            </div>
+        
+
+        </ngx-slick-carousel>
+
+    </div>
+
+    <div class="btn-acao-centro">
+        <button class="btn-acao">Lorem Ipsum</button>
+    </div>
+
+
+
+
+
+
+
+</section>
+
+<section class="contato">
+    <div class="container-alinhado">
+      <div class="caixas-contato">
+        <div class="caixa-textos caixa-flex-contatos" style="width: 60%;">
+            <h1 class=" titulo-contato">Entre em contato conosco</h1>
+            <p class="subtitulo-caixas">Implementamos medidas de segurança robustas para proteger seus dados e garantir
+                sua privacidade absoluta na internet.
+        </div>
+
+        <ul class="lista-contato caixa-flex-contatos" style="width: 40%;">
+            <li class="lista-contato-item texto-caixas">Learn here. Dream here. Develop </li>
+            <li class="lista-contato-item texto-caixas">Learn here. Dream here. Develop here. Learn here.</li>
+            <li class="lista-contato-item texto-caixas">faleconoscocardopar.com</li>
+        </ul>
+      </div>
+    
+
+    </div>
+</section>
+
+<section class="testemunhas">
+    <div class="container-alinhado">
+        <div class="titulos-caixa">
+        <div class="caixa-textos">
+            <h1 class="titulo-caixa-testemunhas">O que nossos clientes falam sobre nós</h1>
+        </div>
+    </div>
+</div>
+    <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig" class="step-container step-container-geral container-btn-passos">
+
+
+        <div ngxSlickItem class="slide " style="background-image: url('assets/img1.jpg')">
+           <div class="caixa-testemunhas">
+            <div class="testemunha-p1">
+                <div class="dono-testemunha">
+                    <div class="foto"></div>
+                    <div class="nome-cargo">
+                        <div class="nome">faremos novos
+                        </div>
+                        <div class="cargo">faremos novos
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="img-workana">
+                    <img src="../../assets/img/marca_workana 1 (1).svg" alt="" class="workana" loading="lazy">
+                </div>
+            </div>
+            <div class="testemunha-p2">
+                <p class="fala">
+                    "Próatividade e senso de urgência do prestador de serviço foi crucial para o bom sentimento sobre o trabalho além, claro, da entrega. Excelente, faremos novos negócios."
+                </p>
+            </div>
+         
+           </div>
+        </div>
+        
+        <div ngxSlickItem class="slide " style="background-image: url('assets/img1.jpg')" loading="lazy">
+            <div class="caixa-testemunhas">
+             <div class="testemunha-p1">
+                 <div class="dono-testemunha">
+                     <div class="foto"></div>
+                     <div class="nome-cargo">
+                         <div class="nome">faremos novos
+                         </div>
+                         <div class="cargo">faremos novos
+                         </div>
+                     </div>
+                 
+                 </div>
+                 <div class="img-workana">
+                     <img src="../../assets/img/marca_workana 1 (1).svg" alt="" class="workana" loading="lazy">
+                 </div>
+             </div>
+             <div class="testemunha-p2">
+                 <p class="fala">
+                     "Próatividade e senso de urgência do prestador de serviço foi crucial para o bom sentimento sobre o trabalho além, claro, da entrega. Excelente, faremos novos negócios."
+                 </p>
+             </div>
+          
+            </div>
+         </div>
+
+         <div ngxSlickItem class="slide " style="background-image: url('assets/img1.jpg')">
+            <div class="caixa-testemunhas">
+             <div class="testemunha-p1">
+                 <div class="dono-testemunha">
+                     <div class="foto"></div>
+                     <div class="nome-cargo">
+                         <div class="nome">faremos novos
+                         </div>
+                         <div class="cargo">faremos novos
+                         </div>
+                     </div>
+                 
+                 </div>
+                 <div class="img-workana">
+                    <img data-src="../../assets/img/marca_workana 1 (1).svg" data-srcset="imagem-small.jpg 600w, imagem-medium.jpg 1200w" alt="Descrição da imagem" class="lazy" loading="lazy">
+
+                    
+                 </div>
+             </div>
+             <div class="testemunha-p2">
+                 <p class="fala">
+                     "Próatividade e senso de urgência do prestador de serviço foi crucial para o bom sentimento sobre o trabalho além, claro, da entrega. Excelente, faremos novos negócios."
+                 </p>
+             </div>
+          
+            </div>
+         </div>
+
+         <div ngxSlickItem class="slide " style="background-image: url('assets/img1.jpg')">
+            <div class="caixa-testemunhas">
+             <div class="testemunha-p1">
+                 <div class="dono-testemunha">
+                     <div class="foto"></div>
+                     <div class="nome-cargo">
+                         <div class="nome">faremos novos
+                         </div>
+                         <div class="cargo">faremos novos
+                         </div>
+                     </div>
+                 
+                 </div>
+                 <div class="img-workana">
+                     <img data-src="../../assets/img/marca_workana 1 (1).svg" data-srcset="imagem-small.jpg 600w, imagem-medium.jpg 1200w" alt="Descrição da imagem" class="lazy" loading="lazy">
+                 </div>
+             </div>
+             <div class="testemunha-p2">
+                 <p class="fala">
+                     "Próatividade e senso de urgência do prestador de serviço foi crucial para o bom sentimento sobre o trabalho além, claro, da entrega. Excelente, faremos novos negócios."
+                 </p>
+             </div>
+          
+            </div>
+         </div>
+
+
+         <div ngxSlickItem class="slide " style="background-image: url('assets/img1.jpg')">
+            <div class="caixa-testemunhas">
+             <div class="testemunha-p1">
+                 <div class="dono-testemunha">
+                     <div class="foto"></div>
+                     <div class="nome-cargo">
+                         <div class="nome">faremos novos
+                         </div>
+                         <div class="cargo">faremos novos
+                         </div>
+                     </div>
+                 
+                 </div>
+                 <div class="img-workana">
+                     <img data-src="../../assets/img/marca_workana 1 (1).svg" data-srcset="imagem-small.jpg 600w, imagem-medium.jpg 1200w" alt="Descrição da imagem" class="lazy" loading="lazy">
+                 </div>
+             </div>
+             <div class="testemunha-p2">
+                 <p class="fala">
+                     "Próatividade e senso de urgência do prestador de serviço foi crucial para o bom sentimento sobre o trabalho além, claro, da entrega. Excelente, faremos novos negócios."
+                 </p>
+             </div>
+          
+            </div>
+         </div>
+       
+       
+
+    </ngx-slick-carousel>
+
+
+
+</section>
+
+<style>
+
+</style>
