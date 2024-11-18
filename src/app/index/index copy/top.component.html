@@ -1,0 +1,90 @@
+
+<header class="header">
+    <div class="up-header">
+        <p class="texto-header">
+            SERVIÇOS COM SUPORTE 24 HORAS PRA QUANDO PRECISAR
+        </p>
+    </div>
+    <div class="bot-header">
+        <div class="parte1-header">
+            <img src="../../../assets/img/logo-header.webp" alt="Logo" class="logo-header" loading="lazy">
+            <div class="menu-desktop">
+                <span class="item-header">Parceiros</span>
+                <span class="item-header">Sobre nós</span>
+                <span class="item-header">Como funciona</span>
+                <span class="item-header">Diferenciais</span>
+                <span class="item-header">Serviços</span>
+                <span class="item-header">Testemunhas</span>
+            </div>
+
+        </div>
+        <div class="btn-header">
+            <button class="btn-acao btn-header">Começar</button>
+        </div>
+        <!-- Botão do menu hambúrguer / X -->
+        <div class="hamburger-menu" (click)="toggleMenu()">
+            <span [class.open]="menuOpen"></span>
+            <span [class.open]="menuOpen"></span>
+            <span [class.open]="menuOpen"></span>
+        </div>
+    </div>
+    <!-- Menu lateral que desliza da esquerda -->
+    <nav class="side-menu" [class.open]="menuOpen">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Sobre</a></li>
+        </ul>
+    </nav>
+</header>
+
+  
+  
+<section class="banner">
+    <div class="banner-caixa">
+        <div class="box">
+
+            <div class="caixa-banner-textos">
+                <h1 class="titulo-caixas">
+                    Potencialize sua infraestrutura com soluções inteligentes para o futuro.
+                </h1>
+                <div class="sub-titulo-banner">
+                    <h2 class="titulo-caixas">
+                        Faça parte você também
+                    </h2>
+
+                </div>
+            </div>
+            <img src="../../assets/img/seta.svg" alt="" class="icone-banner" loading="lazy" data-aos-duration="800">
+
+        </div>
+    </div>
+
+    <video autoplay muted loop loading="lazy" class="video-banner">
+        <source src="../../assets/img/videoBanner.mp4" type="video/mp4" loading="lazy">
+        Seu navegador não suporta vídeos.
+    </video>
+</section>
+
+<section class="marcas">
+    <h1 class="titulo-caixas">Confiam em nós</h1>
+    <swiper-container 
+    #swiper 
+    [slides-per-view]="slidesPerView" 
+    [space-between]="20" 
+    [breakpoints]="breakpoints" 
+    initial-slide="0"
+    navigation="true"
+    pagination="true"
+    
+  >
+
+    <swiper-slide *ngFor="let image of images">
+      <img [src]="image.src" [alt]="image.alt" style="width: 100%; height: 50px;" loading="lazy"/>
+    </swiper-slide>
+  </swiper-container>
+  </section>
+  
+
+

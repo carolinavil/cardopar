@@ -4,17 +4,21 @@ import { IndexComponent } from './index.component';
 import { IndexRoutingModule } from './index.routing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { TopComponent } from './index copy/top.component';
+import { register } from 'swiper/element/bundle';
+import { BottomComponent } from './bottom/bottom.component';
+register();
 
 @NgModule({
   declarations: [
-    IndexComponent
+    IndexComponent,
+    TopComponent,
+    BottomComponent
   ],
   imports: [
     HttpClientModule,
     CommonModule,
     IndexRoutingModule,
-    SlickCarouselModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

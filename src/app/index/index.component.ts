@@ -1,50 +1,140 @@
-
-
-import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, Renderer2, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import AOS from 'aos';
 
 @Component({
-  selector: 'app-index',
+  selector: 'app-root',
   templateUrl: './index.component.html',
-  styleUrl: './index.component.css'
+  styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements AfterViewInit {
-    constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  slidesPerViewQuemSomos = 3;
+  menuOpen = false;
+  mobileCard = false;
+  currentIndex = 0;
+  mobile = false;
+  mobileSlides = 100;
+  totalImages = 4;
+  images = [
+    { src: 'assets/img/SLIDE3 (1).svg', alt: 'Imagem 1' },
+    { src: 'assets/img/SLIDE4.svg', alt: 'Imagem 2' },
+    { src: 'assets/img/SLIDE5.svg', alt: 'Imagem 3' },
+    { src: 'assets/img/SLIDE5.svg', alt: 'Imagem 4' }
+  ];
+  slidesToShow = 1;
+  currentStep: number = 1;
+  slidesPerView = 1; // Default value for small screens
 
-    ngAfterViewInit() {
-        if (isPlatformBrowser(this.platformId)) {
-            AOS.init();
-        }
+  breakpoints = {
+    640: {
+      slidesPerView: 2, // Tablets
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3, // Desktop
+      spaceBetween: 30,
+    },
+  };
+
+  constructor(private el: ElementRef, private renderer: Renderer2, @Inject(PLATFORM_ID) private platformId: Object) {}
+
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.setSlidesToShow();
+      window.addEventListener('resize', () => this.setSlidesToShow());
     }
+  }
 
-    
+  ngAfterViewInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      // Placeholder for any functionality needed after view initialization in the browser
+    }
+  }
 
-slides = [
-  { img: "https://via.placeholder.com/600x400?text=1" },
-  { img: "https://via.placeholder.com/600x400?text=2" },
-  { img: "https://via.placeholder.com/600x400?text=3" }
-];
-slideConfig = {
-  slidesToShow: 3,
-  infinite: false,
-  responsive: [
-    {
-      breakpoint: 900, // Quando a tela for menor que 900px
-      settings: {
-        slidesToShow: 1.5, // Exibir 3 slides
+  setSlidesToShow() {
+    if (window.innerWidth <= 768) {
+      this.mobile = true;
+      this.mobileSlides = 75;
+    } else {
+      this.mobile = false;
+      this.mobileSlides = 100;
+    }
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  // Mantendo o método getTransform conforme solicitado
+  getTransform() {
+    return `translateX(${-this.currentIndex * (100 / this.slidesToShow)}%)`;
+  }
+
+  getTransformOs() {
+    return `translateX(${-this.currentIndex * (85 / this.slidesToShow)}%)`;
+  }
+
+  prevImage() {
+    this.currentIndex = (this.currentIndex - 1 + this.totalImages) % this.totalImages;
+    this.currentStep = this.currentStep === 1 ? 3 : this.currentStep - 1;
+  }
+
+  nextImage() {
+    this.currentIndex = (this.currentIndex + 1) % this.totalImages;
+    this.currentStep = (this.currentStep % 3) + 1;
+  }
+
+  adjustSlidesPerView(windowWidth: number) {
+    this.mobileCard = false;
+    if (windowWidth <= 2000) {
+      this.slidesPerViewQuemSomos = 2;
+      if (windowWidth <= 960) {
+        this.mobileCard = true;
+        this.slidesPerViewQuemSomos = 1;
       }
     }
-  ]
-};
+  }
 
+  // Método selectStep mantido conforme solicitado
+  selectStep(step: number) {
+    this.currentStep = step;
+  }
 
-currentStep: number = 1; // Passo inicial
+  getBoxClass() {
+    switch (this.currentStep) {
+      case 1:
+        return 'back-caixa-servico caixa-um';
+      case 2:
+        return 'back-caixa-servico caixa-dois';
+      case 3:
+        return 'back-caixa-servico caixa-tres';
+      default:
+        return '';
+    }
+  }
 
-selectStep(step: number) {
-  this.currentStep = step; // Atualiza o passo atual com base no botão clicado
+  getTitle() {
+    switch (this.currentStep) {
+      case 1:
+        return 'Especialistas em WordPress';
+      case 2:
+        return 'Especialistas em Segurança';
+      case 3:
+        return 'Especialistas em Performance';
+      default:
+        return '';
+    }
+  }
+
+  getDescription() {
+    switch (this.currentStep) {
+      case 1:
+        return 'Implementamos medidas de segurança robustas para proteger seus dados e garantir sua privacidade absoluta na internet.';
+      case 2:
+        return 'Oferecemos soluções avançadas de segurança para proteger seu site de ameaças.';
+      case 3:
+        return 'Otimização de performance para uma experiência de usuário mais rápida e eficiente.';
+      default:
+        return '';
+    }
+  }
 }
-}
-
-
-

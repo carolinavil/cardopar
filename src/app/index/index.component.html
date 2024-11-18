@@ -1,104 +1,120 @@
-<section class=" sobre-nos" data-aos="fade-up">
-    <div class="container-alinhado">
-        <div class="caixa-textos" >
-            <h1 class="titulo-caixas">Sobre nós</h1>
+<app-top></app-top>
 
-            <p class="texto-caixas texto-sobre-nos">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan
-                arcu. Nulla facilisi. Cras nec erat fringilla, vehicula libero non, luctus risus. Donec euismod dui et
-                arcu congue, in varius risus venenatis. Integer a cursus augue. Aenean dictum suscipit lorem, vel
-                feugiat nulla dapibus ut. Sed sed risus libero. Suspendisse fermentum malesuada ligula, id sollicitudin
-                turpis i
+
+<section class=" sobre-nos  ">
+    <div class="container-alinhado">
+        <div class="caixa-textos">
+            <div class="titulos-caixa">
+                <h1 class="titulo-caixas">Sobre nós</h1>
+            </div>
+            <p class="texto-caixas texto-sobre-nos" >
+                Por que escolher a Cardopar? Nós oferecemos soluções que incorporam a tecnologia mais avançada do mercado, garantindo excelente qualidade a um preço acessível. Além disso, somos especializados em instalação e configuração de servidores, migração de sistemas e segurança.
+            </p>
+         
+
+
+            <p class="texto-caixas texto-sobre-nos" style="margin-top:1em">Na Cardopar, nossa prioridade é a eficiência. Através da otimização dos seus recursos digitais, ajudamos você a reduzir custos e aumentar sua receita. Contar com a Cardopar é garantir mais eficiência para o seu negócio.
+
+
             </p>
 
             <button class="btn-acao">Lorem Ipsum</button>
         </div>
     </div>
 
-    <!-- 
-  <div class="caixa-imagem">
-    <img src="../../assets/img/img-desktops .svg" alt="" class="imagem-sobre-nos">
-  </div> -->
+
+    <div class="caixa-imagem">
+        <img src="../../assets/img/img-desktops- (1).webp" alt="" class="imagem-sobre-nos" loading="lazy">
+    </div>
 
 </section>
-<section class="passos" data-aos="fade-up">
+<section class="passos  ">
     <div class="container-alinhado">
-        <div class="caixa-textos">
-        
-            <div class="titulos-caixa">
-                <h1 class="titulo-caixas">Iniciando seu atendimento</h1>
-                <h2 class="subtitulo-caixas">
-                    Dream here. Develop here. Dream here. Develop here.
-                </h2>
+
+
+        <div class="caixa-passos-desktop">
+            <div class="caixa-textos">
+
+                <div class="titulos-caixa">
+                    <h1 class="titulo-caixas">Iniciando seu atendimento</h1>
+                    <h2 class="subtitulo-caixas">
+                        Estamos aqui para ajudar a transformar suas ideias em realidade. Comece seu atendimento conosco e conte com nossa equipe em cada etapa do processo.
+                    </h2>
+                </div>
             </div>
 
+
             <div class="step-container-desktop">
-                <button (click)="selectStep(1)" class="btn-passo" [ngClass]="{'active': currentStep === 1}"><span class="numero-passo">1</span> Iniciando seu atendimento</button>
-                <button (click)="selectStep(2)" class="btn-passo" [ngClass]="{'active': currentStep === 2}"><span class="numero-passo">1</span>Iniciando seu atendimento</button>
-                <button (click)="selectStep(3)" class="btn-passo" [ngClass]="{'active': currentStep === 3}"><span class="numero-passo">1</span>Iniciando seu atendimento</button>
+                <button (click)="selectStep(1)" class="btn-passo" [ngClass]="{'active': currentStep === 1}"><span
+                        class="numero-passo">1</span> Encontre o serviço desejado</button>
+                <button (click)="selectStep(2)" class="btn-passo" [ngClass]="{'active': currentStep === 2}"><span
+                        class="numero-passo">2</span> Fale com nossa equipe e solicite seu orçamento</button>
+                <button (click)="selectStep(3)" class="btn-passo" [ngClass]="{'active': currentStep === 3}"><span
+                        class="numero-passo">3</span>Finalize o atendimento</button>
             </div>
         </div>
+
+
 
 
         <div class="passos-flex">
-    <div class="content">
-        <div *ngIf="currentStep === 1" class="passo-item">
+            <div class="content">
+                <div *ngIf="currentStep === 1" class="passo-item">
 
-            <div class="titulo-passo">1- Iniciando seu atendimento</div>
-            <div class="caixa-passo">
-                <div class="img-passo">
-                    <img src="../../assets/img/Icon_Nuvem1 1.svg" alt="" loading="lazy">
+                    <div class="titulo-passo">Encontre o serviço desejado</div>
+                    <div class="caixa-passo">
+                        <div class="img-passo">
+                            <img src="../../assets/img/passo1 (1).webp" alt="" loading="lazy">
+                        </div>
+
+                        <div class="texto-passo">
+                            Aqui, o usuário pode explorar os diferentes serviços oferecidos pela empresa, escolhendo o que mais se adequa às suas necessidades.
+                        </div>
+                    </div>
                 </div>
 
-                <div class="texto-passo">
-                    Dream here. Develop here. Dream here. Develop here. Dream here. Develop here. Learn here. Dream
-                    here. Develop here. Dream here. Develop here.
+                <div *ngIf="currentStep === 2" class="passo-item">
+                    <div class="titulo-passo">  Fale com nossa equipe e solicite seu orçamento.</div>
+                    <div class="caixa-passo">
+                        <div class="img-passo">
+                            <img src="../../assets/img/passo2 (1).webp" alt="" loading="lazy">
+                        </div>
+
+                        <div class="texto-passo">
+                            Uma vez que o usuário encontrou o serviço desejado, ele pode entrar em contato diretamente com a equipe, tirar dúvidas e solicitar um orçamento personalizado.
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="currentStep === 3" class="passo-item">
+                    <div class="titulo-passo">Finalize o atendimento</div>
+                    <div class="caixa-passo">
+                        <div class="img-passo">
+                            <img src="../../assets/img/Icon_Nuvem1 1.webp" alt="" loading="lazy">
+                        </div>
+
+                        <div class="texto-passo">
+                            Após o orçamento ser aprovado e todas as questões resolvidas, o usuário pode concluir o atendimento e finalizar o processo.
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div *ngIf="currentStep === 2" class="passo-item">
-            <div class="titulo-passo">1- Iniciando seu atendimento</div>
-            <div class="caixa-passo">
-                <div class="img-passo">
-                    <img src="../../assets/img/Icon_Nuvem1 1.svg" alt="" loading="lazy">
-                </div>
 
-                <div class="texto-passo">
-                    Dream here. Develop here. Dream here. Develop here. Dream here. Develop here. Learn here. Dream
-                    here. Develop here. Dream here. Develop here.
-                </div>
+            <div class="step-container step-container-passo">
+                <button (click)="selectStep(1)" class="btn-passo" [ngClass]="{'active': currentStep === 1}">1</button>
+                <button (click)="selectStep(2)" class="btn-passo" [ngClass]="{'active': currentStep === 2}">2</button>
+                <button (click)="selectStep(3)" class="btn-passo" [ngClass]="{'active': currentStep === 3}">3</button>
             </div>
+
+
+
         </div>
 
-        <div *ngIf="currentStep === 3" class="passo-item">
-            <div class="titulo-passo">1- Iniciando seu atendimento</div>
-            <div class="caixa-passo">
-                <div class="img-passo">
-                    <img src="../../assets/img/Icon_Nuvem1 1.svg" alt="" loading="lazy">
-                </div>
-
-                <div class="texto-passo">
-                    Dream here. Develop here. Dream here. Develop here. Dream here. Develop here. Learn here. Dream
-                    here. Develop here. Dream here. Develop here.
-                </div>
-            </div>
-        </div>
     </div>
 
 
-    <div class="step-container step-container-passo">
-        <button (click)="selectStep(1)" class="btn-passo" [ngClass]="{'active': currentStep === 1}">1</button>
-        <button (click)="selectStep(2)" class="btn-passo" [ngClass]="{'active': currentStep === 2}">2</button>
-        <button (click)="selectStep(3)" class="btn-passo" [ngClass]="{'active': currentStep === 3}">3</button>
-    </div>
 
- 
-
-</div>
-  
-
-
-    </div>
     <div class="btn-acao-centro">
         <button class="btn-acao">Lorem Ipsum</button>
     </div>
@@ -106,33 +122,53 @@
 </section>
 
 
-<section class="diferenciais" data-aos="fade-up">
+<section class="diferenciais">
     <div class="container-alinhado">
         <div class="caixa-textos">
             <div class="titulos-caixa">
                 <h1 class="titulo-caixas">Nossos diferenciais</h1>
-                <p class="subtitulo-caixas">Dream here. Develop here. Dream here. Develop here. Dream here. Develop here. Learn here. Dream here. Develop here. Dream here. Develop here.</p>
+                <p class="subtitulo-caixas">
+                    Desenvolvemos soluções inovadoras, focadas em resultados. Nosso time é comprometido com a excelência, sempre buscando melhorar os processos e entregar valor real aos nossos clientes. Acreditamos que o futuro é construído com a união entre tecnologia, criatividade e dedicação.
+                </p>
             </div>
-         
-
         </div>
 
         <div class="lista-diferenciais">
             <div class="diferencial">
                 <div class="titulo-diferencial">
-                    <div class="icone-diferencial">1</div>
-                    <div class="escrito-titulo-diferencial">DIFERENCIAL</div>
+                  <img src="../../assets/img/1 (2).webp" alt="" loading="lazy" class="icone-diferencial">
+                    <div class="escrito-titulo-diferencial">Inovação Tecnológica</div>
                 </div>
                 <div class="sublista-diferencial">
                     <ul class="sublista-itens">
                         <li class="sublista-item">
-                            <p class="sublista-texto">Developed</p>
+                            <p class="sublista-texto">Desenvolvimento ágil com tecnologias de ponta</p>
                         </li>
                         <li class="sublista-item">
-                            <p class="sublista-texto">Developed</p>
+                            <p class="sublista-texto">Integração contínua e entrega rápida</p>
                         </li>
                         <li class="sublista-item">
-                            <p class="sublista-texto">Developed</p>
+                            <p class="sublista-texto">Utilização de metodologias ágeis para resultados eficazes</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="diferencial diferencial2">
+                <div class="titulo-diferencial">
+                 <img src="../../assets/img/2 (1).webp" alt="" loading="lazy" class="icone-diferencial">
+                    <div class="escrito-titulo-diferencial">Equipe Especializada</div>
+                </div>
+                <div class="sublista-diferencial">
+                    <ul class="sublista-itens">
+                        <li class="sublista-item">
+                            <p class="sublista-texto">Profissionais experientes e qualificados</p>
+                        </li>
+                        <li class="sublista-item">
+                            <p class="sublista-texto">Capacidade de adaptação às necessidades do cliente</p>
+                        </li>
+                        <li class="sublista-item">
+                            <p class="sublista-texto">Formação contínua para acompanhar as tendências do mercado</p>
                         </li>
                     </ul>
                 </div>
@@ -140,352 +176,29 @@
 
             <div class="diferencial">
                 <div class="titulo-diferencial">
-                    <div class="icone-diferencial">1</div>
-                    <div class="escrito-titulo-diferencial">DIFERENCIAL</div>
+               <img src="../../assets/img/3 (1).webp" alt="" loading="lazy" class="icone-diferencial">
+                    <div class="escrito-titulo-diferencial">Compromisso com a Qualidade</div>
                 </div>
                 <div class="sublista-diferencial">
                     <ul class="sublista-itens">
                         <li class="sublista-item">
-                            <p class="sublista-texto">Developed</p>
+                            <p class="sublista-texto">Atenção aos detalhes em cada etapa do processo</p>
                         </li>
                         <li class="sublista-item">
-                            <p class="sublista-texto">Developed</p>
+                            <p class="sublista-texto">Garantia de entregas dentro dos padrões de excelência</p>
                         </li>
                         <li class="sublista-item">
-                            <p class="sublista-texto">Developed</p>
+                            <p class="sublista-texto">Feedback constante para melhoria contínua</p>
                         </li>
                     </ul>
                 </div>
             </div>
-
-            <div class="diferencial">
-                <div class="titulo-diferencial">
-                    <div class="icone-diferencial">1</div>
-                    <div class="escrito-titulo-diferencial">DIFERENCIAL</div>
-                </div>
-                <div class="sublista-diferencial">
-                    <ul class="sublista-itens">
-                        <li class="sublista-item">
-                            <p class="sublista-texto">Developed</p>
-                        </li>
-                        <li class="sublista-item">
-                            <p class="sublista-texto">Developed</p>
-                        </li>
-                        <li class="sublista-item">
-                            <p class="sublista-texto">Developed</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
         </div>
-
 
         <div class="btn-acao-centro">
-            <button class="btn-acao">Lorem Ipsum</button>
+            <button class="btn-acao">Saiba Mais</button>
         </div>
     </div>
 </section>
 
-<section class="servicos" data-aos="fade-up">
-    <div class="container-alinhado">
-        <div class="caixa-textos">
-            <div class="titulos-caixa">
-                <h1 class="titulo-caixas">Nossos principais serviços</h1>
-                <h2 class="subtitulo-caixas">
-                    Dream here. Develop here. Dream here. Develop here.
-                </h2>
-            </div>
-
-
-        </div>
-    </div>
-
-    <div class="conteudo-principais-servicos">
-        <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig"
-            class="step-container container-btn-passos">
-            <button ngxSlickItem class="slide" (click)="selectStep(1)" class="btn-servicos"
-                [ngClass]="{'active-servicos': currentStep === 1}">Product documentation
-            </button>
-            <button ngxSlickItem class="slide" (click)="selectStep(2)" class="btn-servicos"
-                [ngClass]="{'active-servicos': currentStep === 2}">Product documentation
-            </button>
-            <button ngxSlickItem class="slide" (click)="selectStep(3)" class="btn-servicos"
-                [ngClass]="{'active-servicos': currentStep === 3}">E-mail</button>
-        </ngx-slick-carousel>
-
-        <div class="container-alinhado">
-            <div class="content">
-                <div *ngIf="currentStep === 1" class="passo-item">
-                    <div class="back-caixa-servico caixa-um">
-
-                    </div>
-                    <div class="textos-caixa-servico">
-                        <h1 class="titulo-caixa-servico">
-                            Especialistas em WordPress
-                        </h1>
-                        <p class="texto-caixas">Implementamos medidas de segurança robustas para p
-                            roteger seus dados e garantir sua privacidade absoluta na internet.</p>
-                        <button class="btn-acao">Lorem Ipsum</button>
-                    </div>
-                </div>
-
-                <div *ngIf="currentStep === 2" class="passo-item">
-                    <div class="back-caixa-servico caixa-um">
-
-                    </div>
-                    <div class="textos-caixa-servico">
-                        <h1 class="titulo-caixa-servico">
-                            Especialistas em WordPress
-                        </h1>
-                        <p class="texto-caixas">Implementamos medidas de segurança robustas para p
-                            roteger seus dados e garantir sua privacidade absoluta na internet.</p>
-                        <button class="btn-acao">Lorem Ipsum</button>
-                    </div>
-                </div>
-
-                <div *ngIf="currentStep === 3" class="passo-item">
-                    <div class="back-caixa-servico caixa-um">
-
-                    </div>
-                    <div class="textos-caixa-servico">
-                        <h1 class="titulo-caixa-servico">
-                            Especialistas em WordPress
-                        </h1>
-                        <p class="texto-caixas">Implementamos medidas de segurança robustas para p
-                            roteger seus dados e garantir sua privacidade absoluta na internet.</p>
-                        <button class="btn-acao">Lorem Ipsum</button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="container-alinhado">
-        <div class="titulos-caixa">
-        <div class="caixa-textos">
-            <h1 class="titulo-caixas titulo-contato">Outros serviços</h1>
-           
-        </div>
-             
-    </div>
-    </div>
-    <div class="outros-servicos">
-        <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig"
-            class="step-container step-container-geral container-btn-passos">
-
-
-            <div ngxSlickItem class="slide slide-servico" style="background-image: url('assets/img1.jpg')">
-                <h3>Texto do Slide 1</h3>
-            </div>
-            <div ngxSlickItem class="slide slide-servico" style="background-image: url('assets/img2.jpg')">
-                <h3>Texto do Slide 2</h3>
-            </div>
-
-            <div ngxSlickItem class="slide slide-servico">
-                <h3>Texto do Slide 1</h3>
-            </div>
-
-            
-            <div ngxSlickItem class="slide slide-servico">
-                <h3>Texto do Slide 1</h3>
-            </div>
-
-            
-            <div ngxSlickItem class="slide slide-servico">
-                <h3>Texto do Slide 1</h3>
-            </div>
-        
-
-        </ngx-slick-carousel>
-
-    </div>
-
-    <div class="btn-acao-centro">
-        <button class="btn-acao">Lorem Ipsum</button>
-    </div>
-
-
-
-
-
-
-
-</section>
-
-<section class="contato">
-    <div class="container-alinhado">
-      <div class="caixas-contato">
-        <div class="caixa-textos caixa-flex-contatos" style="width: 60%;">
-            <h1 class=" titulo-contato">Entre em contato conosco</h1>
-            <p class="subtitulo-caixas">Implementamos medidas de segurança robustas para proteger seus dados e garantir
-                sua privacidade absoluta na internet.
-        </div>
-
-        <ul class="lista-contato caixa-flex-contatos" style="width: 40%;">
-            <li class="lista-contato-item texto-caixas">Learn here. Dream here. Develop </li>
-            <li class="lista-contato-item texto-caixas">Learn here. Dream here. Develop here. Learn here.</li>
-            <li class="lista-contato-item texto-caixas">faleconoscocardopar.com</li>
-        </ul>
-      </div>
-    
-
-    </div>
-</section>
-
-<section class="testemunhas">
-    <div class="container-alinhado">
-        <div class="titulos-caixa">
-        <div class="caixa-textos">
-            <h1 class="titulo-caixa-testemunhas">O que nossos clientes falam sobre nós</h1>
-        </div>
-    </div>
-</div>
-    <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig" class="step-container step-container-geral container-btn-passos">
-
-
-        <div ngxSlickItem class="slide " style="background-image: url('assets/img1.jpg')">
-           <div class="caixa-testemunhas">
-            <div class="testemunha-p1">
-                <div class="dono-testemunha">
-                    <div class="foto"></div>
-                    <div class="nome-cargo">
-                        <div class="nome">faremos novos
-                        </div>
-                        <div class="cargo">faremos novos
-                        </div>
-                    </div>
-                
-                </div>
-                <div class="img-workana">
-                    <img src="../../assets/img/marca_workana 1 (1).svg" alt="" class="workana" loading="lazy">
-                </div>
-            </div>
-            <div class="testemunha-p2">
-                <p class="fala">
-                    "Próatividade e senso de urgência do prestador de serviço foi crucial para o bom sentimento sobre o trabalho além, claro, da entrega. Excelente, faremos novos negócios."
-                </p>
-            </div>
-         
-           </div>
-        </div>
-        
-        <div ngxSlickItem class="slide " style="background-image: url('assets/img1.jpg')" loading="lazy">
-            <div class="caixa-testemunhas">
-             <div class="testemunha-p1">
-                 <div class="dono-testemunha">
-                     <div class="foto"></div>
-                     <div class="nome-cargo">
-                         <div class="nome">faremos novos
-                         </div>
-                         <div class="cargo">faremos novos
-                         </div>
-                     </div>
-                 
-                 </div>
-                 <div class="img-workana">
-                     <img src="../../assets/img/marca_workana 1 (1).svg" alt="" class="workana" loading="lazy">
-                 </div>
-             </div>
-             <div class="testemunha-p2">
-                 <p class="fala">
-                     "Próatividade e senso de urgência do prestador de serviço foi crucial para o bom sentimento sobre o trabalho além, claro, da entrega. Excelente, faremos novos negócios."
-                 </p>
-             </div>
-          
-            </div>
-         </div>
-
-         <div ngxSlickItem class="slide " style="background-image: url('assets/img1.jpg')">
-            <div class="caixa-testemunhas">
-             <div class="testemunha-p1">
-                 <div class="dono-testemunha">
-                     <div class="foto"></div>
-                     <div class="nome-cargo">
-                         <div class="nome">faremos novos
-                         </div>
-                         <div class="cargo">faremos novos
-                         </div>
-                     </div>
-                 
-                 </div>
-                 <div class="img-workana">
-                    <img data-src="../../assets/img/marca_workana 1 (1).svg" data-srcset="imagem-small.jpg 600w, imagem-medium.jpg 1200w" alt="Descrição da imagem" class="lazy" loading="lazy">
-
-                    
-                 </div>
-             </div>
-             <div class="testemunha-p2">
-                 <p class="fala">
-                     "Próatividade e senso de urgência do prestador de serviço foi crucial para o bom sentimento sobre o trabalho além, claro, da entrega. Excelente, faremos novos negócios."
-                 </p>
-             </div>
-          
-            </div>
-         </div>
-
-         <div ngxSlickItem class="slide " style="background-image: url('assets/img1.jpg')">
-            <div class="caixa-testemunhas">
-             <div class="testemunha-p1">
-                 <div class="dono-testemunha">
-                     <div class="foto"></div>
-                     <div class="nome-cargo">
-                         <div class="nome">faremos novos
-                         </div>
-                         <div class="cargo">faremos novos
-                         </div>
-                     </div>
-                 
-                 </div>
-                 <div class="img-workana">
-                     <img data-src="../../assets/img/marca_workana 1 (1).svg" data-srcset="imagem-small.jpg 600w, imagem-medium.jpg 1200w" alt="Descrição da imagem" class="lazy" loading="lazy">
-                 </div>
-             </div>
-             <div class="testemunha-p2">
-                 <p class="fala">
-                     "Próatividade e senso de urgência do prestador de serviço foi crucial para o bom sentimento sobre o trabalho além, claro, da entrega. Excelente, faremos novos negócios."
-                 </p>
-             </div>
-          
-            </div>
-         </div>
-
-
-         <div ngxSlickItem class="slide " style="background-image: url('assets/img1.jpg')">
-            <div class="caixa-testemunhas">
-             <div class="testemunha-p1">
-                 <div class="dono-testemunha">
-                     <div class="foto"></div>
-                     <div class="nome-cargo">
-                         <div class="nome">faremos novos
-                         </div>
-                         <div class="cargo">faremos novos
-                         </div>
-                     </div>
-                 
-                 </div>
-                 <div class="img-workana">
-                     <img data-src="../../assets/img/marca_workana 1 (1).svg" data-srcset="imagem-small.jpg 600w, imagem-medium.jpg 1200w" alt="Descrição da imagem" class="lazy" loading="lazy">
-                 </div>
-             </div>
-             <div class="testemunha-p2">
-                 <p class="fala">
-                     "Próatividade e senso de urgência do prestador de serviço foi crucial para o bom sentimento sobre o trabalho além, claro, da entrega. Excelente, faremos novos negócios."
-                 </p>
-             </div>
-          
-            </div>
-         </div>
-       
-       
-
-    </ngx-slick-carousel>
-
-
-
-</section>
-
-<style>
-
-</style>
+<app-bottom></app-bottom>
