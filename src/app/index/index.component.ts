@@ -23,7 +23,7 @@ export class IndexComponent implements AfterViewInit {
   slidesToShow = 1;
   currentStep: number = 1;
   slidesPerView = 1; // Default value for small screens
-
+  slideServicos= 1.1
   breakpoints = {
     640: {
       slidesPerView: 2, // Tablets

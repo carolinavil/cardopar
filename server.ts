@@ -1,7 +1,6 @@
 import { APP_BASE_HREF } from '@angular/common';
 import { CommonEngine } from '@angular/ssr';
 import express from 'express';
-import compression from 'compression'
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import bootstrap from './src/main.server';
@@ -11,7 +10,6 @@ export function app(): express.Express {
   const server = express();
   
   // Use compression middleware
-  server.use(compression()); // Adicionando o middleware de compressão
 
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
   const browserDistFolder = resolve(serverDistFolder, '../browser');

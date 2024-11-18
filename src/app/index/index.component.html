@@ -1,4 +1,94 @@
-<app-top></app-top>
+
+<header class="header">
+    <div class="up-header">
+        <p class="texto-header">
+            SERVIÇOS COM SUPORTE 24 HORAS PRA QUANDO PRECISAR
+        </p>
+    </div>
+    <div class="bot-header">
+        <div class="parte1-header">
+            <img src="../../../assets/img/logo-header.webp" alt="Logo" class="logo-header" loading="lazy">
+            <div class="menu-desktop">
+                <span class="item-header">Parceiros</span>
+                <span class="item-header">Sobre nós</span>
+                <span class="item-header">Como funciona</span>
+                <span class="item-header">Diferenciais</span>
+                <span class="item-header">Serviços</span>
+                <span class="item-header">Testemunhas</span>
+            </div>
+
+        </div>
+        <div class="btn-header">
+            <button class="btn-acao btn-header">Começar</button>
+        </div>
+        <!-- Botão do menu hambúrguer / X -->
+        <div class="hamburger-menu" (click)="toggleMenu()">
+            <span [class.open]="menuOpen"></span>
+            <span [class.open]="menuOpen"></span>
+            <span [class.open]="menuOpen"></span>
+        </div>
+    </div>
+    <!-- Menu lateral que desliza da esquerda -->
+    <nav class="side-menu" [class.open]="menuOpen">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Sobre</a></li>
+        </ul>
+    </nav>
+</header>
+
+  
+  
+<section class="banner">
+    <div class="banner-caixa">
+        <div class="box">
+
+            <div class="caixa-banner-textos">
+                <h1 class="titulo-caixas">
+                    Potencialize sua infraestrutura com soluções inteligentes para o futuro.
+                </h1>
+                <div class="sub-titulo-banner">
+                    <h2 class="titulo-caixas">
+                        Faça parte você também
+                    </h2>
+
+                </div>
+            </div>
+            <img src="../../assets/img/seta.svg" alt="" class="icone-banner" loading="lazy" data-aos-duration="800">
+
+        </div>
+    </div>
+
+    <video autoplay muted loop loading="lazy" class="video-banner">
+        <source src="../../assets/img/videoBanner.mp4" type="video/mp4" loading="lazy">
+        Seu navegador não suporta vídeos.
+    </video>
+</section>
+
+<section class="marcas">
+    <h1 class="titulo-caixas">Confiam em nós</h1>
+    <swiper-container 
+    #swiper 
+    [slides-per-view]="slidesPerView" 
+    [space-between]="20" 
+    [breakpoints]="breakpoints" 
+    initial-slide="0"
+    navigation="true"
+    pagination="true"
+    
+  >
+
+    <swiper-slide *ngFor="let image of images">
+      <img [src]="image.src" [alt]="image.alt" style="width: 100%; height: 50px;" loading="lazy"/>
+    </swiper-slide>
+  </swiper-container>
+  </section>
+  
+
+
+
 
 
 <section class=" sobre-nos  ">
@@ -201,4 +291,633 @@
     </div>
 </section>
 
-<app-bottom></app-bottom>
+
+
+<section class="servicos">
+    <div class="container-alinhado">
+        <div class="caixa-textos">
+            <div class="titulos-caixa">
+                <h1 class="titulo-caixas">Nossos principais serviços</h1>
+                <h2 class="subtitulo-caixas">
+                    Dream here. Develop here. Dream here. Develop here.
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="carousel-container mobile">
+
+        <swiper-container 
+        #swiper 
+    [slides-per-view]="slideServicos" 
+    [space-between]="20" 
+    [breakpoints]="breakpoints" 
+    initial-slide="0"
+    navigation="true"
+    pagination="false"
+      >
+    
+        <swiper-slide >
+            <div ngxSlickItem class="slide" (click)="selectStep(1)" class="btn-servicos"
+            [ngClass]="{'active-servicos': currentStep === 1}">Product documentation
+        </div>
+    </swiper-slide >
+
+
+    <swiper-slide >
+        <div ngxSlickItem class="slide" (click)="selectStep(2)" class="btn-servicos"
+            [ngClass]="{'active-servicos': currentStep === 2}">Product documentation
+        </div>
+</swiper-slide >
+
+<swiper-slide >
+    <div ngxSlickItem class="slide" (click)="selectStep(3)" class="btn-servicos"
+    [ngClass]="{'active-servicos': currentStep === 3}">Product documentation
+</div>
+</swiper-slide >
+
+      </swiper-container>
+     
+    </div>
+    <div class="container-alinhado">
+        <div class="conteudo-servicos-desktop">
+            <div class="servico-btn-item">
+                <button ngxSlickItem class="slide" (click)="selectStep(1)" class="btn-servicos"
+                    [ngClass]="{'active-servicos': currentStep === 1}">Product documentation
+                </button>
+            </div>
+            <div class="servico-btn-item">
+                <button ngxSlickItem class="slide" (click)="selectStep(2)" class="btn-servicos"
+                    [ngClass]="{'active-servicos': currentStep === 2}">Product documentation
+                </button>
+            </div>
+            <div class="servico-btn-item">
+                <button ngxSlickItem class="slide" (click)="selectStep(3)" class="btn-servicos"
+                    [ngClass]="{'active-servicos': currentStep === 3}">Product documentation
+                </button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="passo-item">
+                <div [ngClass]="getBoxClass()">
+                </div>
+                <div class="textos-caixa-servico">
+                    <h1 class="titulo-caixa-servico">
+                        {{ getTitle() }}
+                    </h1>
+                    <p class="texto-caixas">{{ getDescription() }}</p>
+                    <button class="btn-acao">Lorem Ipsum</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-alinhado">
+        <div class="titulos-caixa">
+            <div class="caixa-textos">
+                <h1 class="titulo-caixas titulo-contato">Outros serviços</h1>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="outros-servicos">
+        <swiper-container 
+        #swiper 
+        [slides-per-view]="slidesPerView" 
+        [space-between]="2" 
+        [breakpoints]="breakpoints" 
+        initial-slide="0"
+        navigation="true"
+        pagination="true"
+        [autoplay]="true"
+      >
+    
+        <swiper-slide >
+            <div class="carousel-slide" >
+                <div class="caixa-os">
+                    <h1 class="titulo-os">Especialização em WordPress</h1>
+                    <p class="descricao-os">Otimização e configuração de ambientes WordPress, melhorando desempenho e segurança com suporte contínuo.
+                    </p>
+                </div>
+              </div>
+        </swiper-slide>
+        
+        <swiper-slide >
+            <div class="carousel-slide" >
+                <div class="caixa-os">
+                    <h1 class="titulo-os">Serviços de Balanceamento de Carga</h1>
+                    <p class="descricao-os">Distribuímos tráfego entre servidores, aumentando a disponibilidade e otimizando o desempenho dos serviços.
+                    </p>
+                </div>
+              </div>
+        </swiper-slide>
+        
+        <swiper-slide >
+            <div class="carousel-slide" >
+                <div class="caixa-os">
+                    <h1 class="titulo-os">Bancos de Dados e Clusterização</h1>
+                    <p class="descricao-os">Gerenciamos clusters de bancos de dados, implementando soluções de alta disponibilidade e recuperação de desastres.
+                    </p>
+                </div>
+              </div>
+        </swiper-slide>
+
+        
+        <swiper-slide >
+            <div class="carousel-slide" >
+                <div class="caixa-os">
+                    <h1 class="titulo-os">Gerenciamento de Aplicações em Nuvem</h1>
+                    <p class="descricao-os">Especializamo-nos na orquestração de contêineres com Kubernetes, facilitando desenvolvimentos ágeis e escaláveis.
+                    </p>
+                </div>
+              </div>
+        </swiper-slide>
+
+
+
+        <swiper-slide >
+            <div class="carousel-slide" >
+                <div class="caixa-os">
+                    <h1 class="titulo-os">Elasticidade da Capacidade</h1>
+                    <p class="descricao-os">Ajustamos recursos automaticamente, garantindo desempenho em tempo real durante altas cargas de acesso.
+                    </p>
+                </div>
+              </div>
+        </swiper-slide>
+
+
+
+        <swiper-slide >
+            <div class="carousel-slide" >
+                <div class="caixa-os">
+                    <h1 class="titulo-os">Escalamento Automático</h1>
+                    <p class="descricao-os">Implementamos soluções que escalam automaticamente, atendendo picos de demanda e otimizando custos conforme o uso.
+                    </p>
+                </div>
+              </div>
+        </swiper-slide>
+
+
+        <swiper-slide >
+            <div class="carousel-slide" >
+                <div class="caixa-os">
+                    <h1 class="titulo-os">Simulação de Ataques (Pentests)</h1>
+                    <p class="descricao-os">Identificamos vulnerabilidades em sistemas, gerando relatórios detalhados com recomendações de segurança.
+                    </p>
+                </div>
+              </div>
+        </swiper-slide>
+      </swiper-container>
+        <div class="conteudo-slides">
+        
+        </div>
+      
+        <div class="conteudo-slides">
+            
+   
+        </div>
+    </div>
+    <div class="btn-acao-centro">
+        <button class="btn-acao">Lorem Ipsum</button>
+    </div>
+</section>
+<section class="contato">
+    <div class="container-alinhado">
+        <div class="caixas-contato">
+            <div class="caixa-textos caixa-flex-contatos">
+                <h1 class=" titulo-contato">Entre em contato conosco</h1>
+                <p class="subtitulo-caixas">Implementamos medidas de segurança robustas para proteger seus dados e
+                    garantir
+                    sua privacidade absoluta na internet.
+            </div>
+            <ul class="lista-contato caixa-flex-contatos">
+                <li class="lista-contato-item texto-caixas"><span class="contato-icone"><img
+                            src="../../assets/img/WhatsApp.svg" loading="lazy" alt="a"></span> Learn here. Dream
+                    here. Develop </li>
+                <li class="lista-contato-item texto-caixas"><span class="contato-icone"><img
+                            src="../../assets/img/At sign.svg" loading="lazy" alt="b"></span>Learn here. Dream
+                    here. Develop here. Learn here.</li>
+                <li class="lista-contato-item texto-caixas"><span class="contato-icone"><img
+                            src="../../assets/img/Phone.svg" loading="lazy" alt="c"></span>faleconoscocardopar.com</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="testemunhas">
+
+    <div class="outros-servicos">
+        <swiper-container 
+        #swiper 
+        [slides-per-view]="slidesPerView" 
+        [space-between]="2" 
+        [breakpoints]="breakpoints" 
+        initial-slide="0"
+        navigation="true"
+        pagination="true"
+        [autoplay]="true"
+      >
+    
+        <swiper-slide >
+            <div class="caixa-testemunhas" >
+                <div class="up-testemunhas">
+                    <div class="inf-testemunhas">
+                        <p class="nome-testemunha">Daniel Igor
+                        </p>
+                        <p class="cargo-testemunha">Cliente no Workana
+                        </p>
+                    </div>
+                    <div class="img-workana">
+                        <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                    </div>
+                </div>
+                <div class="bot-testemunhas">
+                    <p class="fala-testemunha">
+                        "Excelente profissional, ótima comunicação, entrega o projeto com muita qualidade."
+                    </p>
+                </div>
+            </div>
+        </swiper-slide>
+        
+        <swiper-slide >
+           <div class="caixa-testemunhas" >
+                <div class="up-testemunhas">
+                    <div class="inf-testemunhas">
+                        <p class="nome-testemunha">Daniel Igor
+                        </p>
+                        <p class="cargo-testemunha">Cliente no Workana
+                        </p>
+                    </div>
+                    <div class="img-workana">
+                        <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                    </div>
+                </div>
+                <div class="bot-testemunhas">
+                    <p class="fala-testemunha">
+                        "Excelente profissional, ótima comunicação, entrega o projeto com muita qualidade."
+                    </p>
+                </div>
+            </div>
+        </swiper-slide>
+        
+        <swiper-slide >
+           <div class="caixa-testemunhas" >
+                <div class="up-testemunhas">
+                    <div class="inf-testemunhas">
+                        <p class="nome-testemunha">Daniel Igor
+                        </p>
+                        <p class="cargo-testemunha">Cliente no Workana
+                        </p>
+                    </div>
+                    <div class="img-workana">
+                        <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                    </div>
+                </div>
+                <div class="bot-testemunhas">
+                    <p class="fala-testemunha">
+                        "Excelente profissional, ótima comunicação, entrega o projeto com muita qualidade."
+                    </p>
+                </div>
+            </div>
+        </swiper-slide>
+
+        
+        <swiper-slide >
+           <div class="caixa-testemunhas" >
+                <div class="up-testemunhas">
+                    <div class="inf-testemunhas">
+                        <p class="nome-testemunha">Daniel Igor
+                        </p>
+                        <p class="cargo-testemunha">Cliente no Workana
+                        </p>
+                    </div>
+                    <div class="img-workana">
+                        <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                    </div>
+                </div>
+                <div class="bot-testemunhas">
+                    <p class="fala-testemunha">
+                        "Excelente profissional, ótima comunicação, entrega o projeto com muita qualidade."
+                    </p>
+                </div>
+            </div>
+        </swiper-slide>
+      </swiper-container>
+        <div class="conteudo-slides">
+        
+        </div>
+      
+        <div class="conteudo-slides">
+            
+    <!-- <div class="carousel-container">
+        <div 
+          class="carousel-images"
+          [style.transform]="getTransformOs()">
+          
+
+          <div class="carousel-slide"  [ngStyle]="{ 'min-width': mobile ? '75%' : '22.3%' }">
+            <div class="caixa-os">
+                <h1 class="titulo-os">Especialização em WordPress</h1>
+                <p class="descricao-os">Otimização e configuração de ambientes WordPress, melhorando desempenho e segurança com suporte contínuo.
+                </p>
+            </div>
+          </div>
+       
+          <div class="carousel-slide"  [ngStyle]="{ 'min-width': mobile ? '75%' : '22.3%' }">
+             <div class="caixa-os">
+                <h1 class="titulo-os">Serviços de Balanceamento de Carga</h1>
+                <p class="descricao-os">Distribuímos tráfego entre servidores, aumentando a disponibilidade e otimizando o desempenho dos serviços.
+
+                </p>
+            </div>
+          </div>
+
+
+          <div class="carousel-slide"  [ngStyle]="{ 'min-width': mobile ? '75%' : '22.3%' }">
+             <div class="caixa-os">
+                <h1 class="titulo-os">Bancos de Dados e Clusterização</h1>
+                <p class="descricao-os">Gerenciamos clusters de bancos de dados, implementando soluções de alta disponibilidade e recuperação de desastres.
+                </p>
+            </div>
+          </div>
+
+
+          <div class="carousel-slide"  [ngStyle]="{ 'min-width': mobile ? '75%' : '22.3%' }">
+             <div class="caixa-os">
+                <h1 class="titulo-os">Gerenciamento de Aplicações em Nuvem</h1>
+                <p class="descricao-os">Especializamo-nos na orquestração de contêineres com Kubernetes, facilitando desenvolvimentos ágeis e escaláveis.
+                </p>
+            </div>
+          </div>
+
+
+          <div class="carousel-slide"  [ngStyle]="{ 'min-width': mobile ? '75%' : '22.3%' }">
+             <div class="caixa-os">
+                <h1 class="titulo-os">Elasticidade da Capacidade</h1>
+                <p class="descricao-os">Ajustamos recursos automaticamente, garantindo desempenho em tempo real durante altas cargas de acesso.
+
+                </p>
+            </div>
+          </div>
+
+          <div class="carousel-slide"  [ngStyle]="{ 'min-width': mobile ? '75%' : '22.3%' }">
+             <div class="caixa-os">
+                <h1 class="titulo-os">Escalamento Automático</h1>
+                <p class="descricao-os">Implementamos soluções que escalam automaticamente, atendendo picos de demanda e otimizando custos conforme o uso.
+
+                </p>
+            </div>
+          </div>
+
+          <div class="carousel-slide"  [ngStyle]="{ 'min-width': mobile ? '75%' : '22.3%' }">
+             <div class="caixa-os">
+                <h1 class="titulo-os">Simulação de Ataques (Pentests)</h1>
+                <p class="descricao-os">Identificamos vulnerabilidades em sistemas, gerando relatórios detalhados com recomendações de segurança.
+                </p>
+            </div>
+          </div>
+        </div>
+        <button (click)="prevImage()" class="prev-btn">←</button>
+        <button (click)="nextImage()" class="next-btn">→</button>
+    </div>     -->
+           
+        </div>
+    </div>
+
+   <!--  <div class="carousel-container">
+        <div 
+          class="carousel-images"
+          [style.transform]="'translateX(' + (-currentIndex * (mobileSlides)) + '%)'"> 
+          <div class="carousel-slide"  [ngStyle]="{ 'min-width': mobile ? '75%' : '30%' }">
+            <div class="caixa-testemunhas" >
+                <div class="up-testemunhas">
+                    <div class="inf-testemunhas">
+                        <p class="nome-testemunha">Daniel Igor
+                        </p>
+                        <p class="cargo-testemunha">Cliente no Workana
+                        </p>
+                    </div>
+                    <div class="img-workana">
+                        <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                    </div>
+                </div>
+                <div class="bot-testemunhas">
+                    <p class="fala-testemunha">
+                        "Excelente profissional, ótima comunicação, entrega o projeto com muita qualidade."
+                    </p>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-slide"  [ngStyle]="{ 'min-width': mobile ? '75%' : '30%' }">
+            <div class="caixa-testemunhas" >
+                <div class="up-testemunhas">
+                    <div class="inf-testemunhas">
+                        <p class="nome-testemunha">Agência Zap – Conteúdo e Conversão.
+                        </p>
+                        <p class="cargo-testemunha">Cliente no Workana
+                        </p>
+                    </div>
+                    <div class="img-workana">
+                        <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                    </div>
+    
+                </div>
+                <div class="bot-testemunhas">
+                    <p class="fala-testemunha">
+                        "Excelente trabalho! Eficiente, comunicativo e entregou tudo o que eu precisava."
+                    </p>
+                </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="carousel-slide"  [ngStyle]="{ 'min-width': mobile ? '75%' : '30%' }">
+            <div class="caixa-testemunhas" >
+                <div class="up-testemunhas">
+                    <div class="inf-testemunhas">
+                        <p class="nome-testemunha">Fusion Technology
+                        </p>
+                        <p class="cargo-testemunha">Cliente no Workana
+                        </p>
+                    </div>
+                    <div class="img-workana">
+                        <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                    </div>
+    
+                </div>
+                <div class="bot-testemunhas">
+                    <p class="fala-testemunha">
+                        "A equipe da Cardopar foi ágil e comprometida, entregando resultados de alta qualidade antes do prazo. Com conhecimento técnico e soluções inovadoras, atenderam nossas necessidades com excelência. Recomendo pela dedicação e excelência no serviço."
+                    </p>
+                </div>
+            </div>
+          </div>
+      
+         Clonagem para o carrossel infinito
+          <div  class="carousel-slide"  [ngStyle]="{ 'min-width': mobile ? '75%' : '30%' }">
+            <div class="caixa-testemunhas" >
+                <div class="up-testemunhas">
+                    <div class="inf-testemunhas">
+                        <p class="nome-testemunha">Ed Carlos
+                        </p>
+                        <p class="cargo-testemunha">Cliente no Workana
+                        </p>
+                    </div>
+                    <div class="img-workana">
+                        <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                    </div>
+    
+                </div>
+                <div class="bot-testemunhas">
+                    <p class="fala-testemunha">
+                        "Ótimo job, rápido e eficiente!!!"
+                    </p>
+                </div>
+            </div>
+          </div>
+
+
+          <div  class="carousel-slide"  [ngStyle]="{ 'min-width': mobile ? '75%' : '30%' }">
+            <div class="caixa-testemunhas" >
+                <div class="up-testemunhas">
+                    <div class="inf-testemunhas">
+                        <p class="nome-testemunha">Guilherme Engel
+                        </p>
+                        <p class="cargo-testemunha">Cliente no Workana
+                        </p>
+                    </div>
+                    <div class="img-workana">
+                        <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                    </div>
+    
+                </div>
+                <div class="bot-testemunhas">
+                    <p class="fala-testemunha">
+                        "Próatividade e senso de urgência do prestador de serviço foi crucial para o bom sentimento sobre o trabalho além, claro, da entrega. Excelente, faremos novos negócios."
+                    </p>
+                </div>
+            </div>
+          </div>
+
+
+
+          <div  class="carousel-slide"  [ngStyle]="{ 'min-width': mobile ? '75%' : '30%' }">
+            <div class="caixa-testemunhas" >
+                <div class="up-testemunhas">
+                    <div class="inf-testemunhas">
+                        <p class="nome-testemunha">Rui de Paula
+                        </p>
+                        <p class="cargo-testemunha">Cliente no Workana
+                        </p>
+                    </div>
+                    <div class="img-workana">
+                        <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                    </div>
+    
+                </div>
+                <div class="bot-testemunhas"  [ngStyle]="{ 'min-width': mobile ? '75%' : '30%' }">
+                    <p class="fala-testemunha">
+                        "Profissional muito capaz, propõe soluções, cumpre com o que promete."
+                    </p>
+                </div>
+            </div>
+          </div>
+
+
+
+          <div  class="carousel-slide"  [ngStyle]="{ 'min-width': mobile ? '75%' : '30%' }">
+            <div class="caixa-testemunhas" >
+                <div class="up-testemunhas">
+                    <div class="inf-testemunhas">
+                        <p class="nome-testemunha">Arthur Paiva
+                        </p>
+                        <p class="cargo-testemunha">Cliente no Workana
+                        </p>
+                    </div>
+                    <div class="img-workana">
+                        <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                    </div>
+    
+                </div>
+                <div class="bot-testemunhas"  [ngStyle]="{ 'min-width': mobile ? '75%' : '30%' }">
+                    <p class="fala-testemunha">
+                        "É aquela famosa historia do Mecânico que sabe qual parafuso apertar. Muito rapido, pratico e eficiente"
+                    </p>
+                </div>
+            </div>
+          </div>
+
+          <div  class="carousel-slide"  [ngStyle]="{ 'min-width': mobile ? '75%' : '30%' }">
+            <div class="caixa-testemunhas" >
+                <div class="up-testemunhas">
+                    <div class="inf-testemunhas">
+                        <p class="nome-testemunha">Jeam Pierre Kuhl
+                        </p>
+                        <p class="cargo-testemunha">Cliente no Workana
+                        </p>
+                    </div>
+                    <div class="img-workana">
+                        <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                    </div>
+    
+                </div>
+                <div class="bot-testemunhas"  [ngStyle]="{ 'min-width': mobile ? '75%' : '30%' }">
+                    <p class="fala-testemunha">
+                        "Simplesmente um baita profissional. Ele sabe o que está fazendo e é muito rápido, prestativo e competente. RECOMENDO 100%"
+                    </p>
+                </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+      
+        <button (click)="prevImage()" class="prev-btn">←</button>
+        <button (click)="nextImage()" class="next-btn">→</button>
+      </div>
+</section> -->
+
+</section>
+<footer class="footer">
+    <div class="container-alinhado">
+        <div class="setores-footer">
+            <div class="setor-footer setor-frase">
+                <img src="../../assets/img/logo-header.svg" alt="logo-footer" class="logo-footer" loading="lazy">
+
+                <p class="frase-footer">Potencialize sua infraestrutura com soluções inteligentes para o futuro.</p>
+            </div>
+            <div class="setor-footer">
+                <h1 class="titulo-footer">INFORMAÇÕES DE CONTATO</h1>
+                <ul class="topicos-footer">
+                    <li class="topico-footer">+55 12 97402-0387</li>
+                    <li class="topico-footer">Sabado das 8h as 18h</li>
+                    <li class="topico-footer">Seg a sexta das 8h as 20h</li>
+                    <li class="topico-footer">faleconoscocardopar.com</li>
+                </ul>
+
+            </div>
+            <div class="setor-footer setor-links">
+                <h1 class="titulo-footer">LINKS ÚTEIS</h1>
+                <ul class="topicos-footer">
+                    <li class="topico-footer">Google Cloud</li>
+                    <li class="topico-footer">AWS</li>
+                    <li class="topico-footer">Azure</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="cop-footer">
+            <p class="texto-cop-footer">Copyright ©2024 todos os direitos reservados | Cardopar</p>
+        </div>
+    </div>
+
+</footer>
+
+<style>
+
+</style>

@@ -20,7 +20,7 @@ export class BottomComponent  {
     { src: 'assets/img/SLIDE5.svg', alt: 'Imagem 3' },
     { src: 'assets/img/SLIDE5.svg', alt: 'Imagem 4' }
   ];
-  slideServicos= 1.1
+
   slidesToShow = 1;
   currentStep: number = 1;
   slidesPerView = 1; // Default value for small screens

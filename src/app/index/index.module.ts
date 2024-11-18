@@ -12,8 +12,7 @@ register();
 @NgModule({
   declarations: [
     IndexComponent,
-    TopComponent,
-    BottomComponent
+
   ],
   imports: [
     HttpClientModule,
