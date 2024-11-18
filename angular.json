@@ -15,7 +15,7 @@
           "options": {
             "optimization": true,
             "sourceMap": false,
-            "outputPath": "dist/cardopar",
+            "outputPath": "src/dist/cardopar",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
