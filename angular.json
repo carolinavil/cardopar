@@ -13,6 +13,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "optimization": true,
+            "sourceMap": false,
             "outputPath": "dist/cardopar4",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -43,7 +45,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+    "maximumError": "600kb" 
                 },
                 {
                  "type": "anyComponentStyle",
