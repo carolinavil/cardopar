@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
   "start": "http-server ./dist/cardopar4 -p 8080", 
-  "build": "ng build --prod",
-  "deploy": "npm install && ng build --prod",
+  "build": "ng build ",
+  "deploy": "npm install && ng build ",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:cardopar4": "node dist/cardopar4/server/server.mjs"
