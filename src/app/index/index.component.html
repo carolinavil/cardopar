@@ -9,12 +9,12 @@
         <div class="parte1-header">
             <img src="../../../assets/img/logo-header.webp" alt="Logo" class="logo-header" loading="lazy">
             <div class="menu-desktop">
-                <span class="item-header">Parceiros</span>
-                <span class="item-header">Sobre nós</span>
-                <span class="item-header">Como funciona</span>
-                <span class="item-header">Diferenciais</span>
-                <span class="item-header">Serviços</span>
-                <span class="item-header">Testemunhas</span>
+                <a class="item-header" href="#parceiros"> Parceiros</a>
+                <a class="item-header" href="#sobre-nos"> Sobre nós</a>
+                <a class="item-header" href="#como"> Como funciona</a>
+                <a class="item-header" href="#diferenciais">Diferenciais</a>
+                <a class="item-header" href="#servicos">Serviços</a>
+                <a class="item-header" href="#testemunhas">Testemunhas</a>
             </div>
 
         </div>
@@ -31,10 +31,13 @@
     <!-- Menu lateral que desliza da esquerda -->
     <nav class="side-menu" [class.open]="menuOpen">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="#">Sobre</a></li>
+
+            <li><a class="item-header" href="#parceiros"> Parceiros</a></li>
+            <li><a class="item-header" href="#sobre-nos"> Sobre nós</a></li>
+            <li><a class="item-header" href="#como"> Como funciona</a></li>
+            <li><a class="item-header" href="#diferenciais">Diferenciais</a></li>
+            <li><a class="item-header" href="#servicos">Serviços</a></li>
+            <li><a class="item-header" href="#testemunhas">Testemunhas</a></li>
         </ul>
     </nav>
 </header>
@@ -67,17 +70,22 @@
     </video>
 </section>
 
-<section class="marcas">
+<section class="marcas" id="parceiros">
     <h1 class="titulo-caixas">Confiam em nós</h1>
     <swiper-container 
     #swiper 
     [slides-per-view]="slidesPerView" 
     [space-between]="20" 
-    [breakpoints]="breakpoints" 
+    [breakpoints]="breakpointsMarcas" 
     initial-slide="0"
     navigation="true"
     pagination="true"
-    
+    infinite="true"
+    [autoplay]="{
+          delay: 1000,  
+  disableOnInteraction: false 
+}"
+autoplay="true"
   >
 
     <swiper-slide *ngFor="let image of images">
@@ -91,7 +99,7 @@
 
 
 
-<section class=" sobre-nos  ">
+<section class=" sobre-nos  " id="sobre-nos">
     <div class="container-alinhado">
         <div class="caixa-textos">
             <div class="titulos-caixa">
@@ -108,7 +116,7 @@
 
             </p>
 
-            <button class="btn-acao">Lorem Ipsum</button>
+            <button class="btn-acao">Fazer orçamento</button>
         </div>
     </div>
 
@@ -118,7 +126,7 @@
     </div>
 
 </section>
-<section class="passos  ">
+<section class="passos  " id="como">
     <div class="container-alinhado">
 
 
@@ -206,13 +214,13 @@
 
 
     <div class="btn-acao-centro">
-        <button class="btn-acao">Lorem Ipsum</button>
+        <button class="btn-acao">Fazer orçamento</button>
     </div>
 
 </section>
 
 
-<section class="diferenciais">
+<section class="diferenciais" id="diferenciais">
     <div class="container-alinhado">
         <div class="caixa-textos">
             <div class="titulos-caixa">
@@ -293,13 +301,13 @@
 
 
 
-<section class="servicos">
+<section class="servicos" id="servicos">
     <div class="container-alinhado">
         <div class="caixa-textos">
             <div class="titulos-caixa">
                 <h1 class="titulo-caixas">Nossos principais serviços</h1>
                 <h2 class="subtitulo-caixas">
-                    Dream here. Develop here. Dream here. Develop here.
+                    Conheça nossos serviços mais requisitados. Arraste para explorar e clique no que desejar.
                 </h2>
             </div>
         </div>
@@ -319,14 +327,14 @@
     
         <swiper-slide >
             <div ngxSlickItem class="slide" (click)="selectStep(1)" class="btn-servicos"
-            [ngClass]="{'active-servicos': currentStep === 1}">Product documentation
+            [ngClass]="{'active-servicos': currentStep === 1}">Especialistas em Wordpress
         </div>
     </swiper-slide >
 
 
     <swiper-slide >
         <div ngxSlickItem class="slide" (click)="selectStep(2)" class="btn-servicos"
-            [ngClass]="{'active-servicos': currentStep === 2}">Product documentation
+            [ngClass]="{'active-servicos': currentStep === 2}">AWS, Azure e Google Cloud
         </div>
 </swiper-slide >
 
@@ -343,12 +351,12 @@
         <div class="conteudo-servicos-desktop">
             <div class="servico-btn-item">
                 <button ngxSlickItem class="slide" (click)="selectStep(1)" class="btn-servicos"
-                    [ngClass]="{'active-servicos': currentStep === 1}">Product documentation
+                    [ngClass]="{'active-servicos': currentStep === 1}">Especialistas em Wordpress
                 </button>
             </div>
             <div class="servico-btn-item">
                 <button ngxSlickItem class="slide" (click)="selectStep(2)" class="btn-servicos"
-                    [ngClass]="{'active-servicos': currentStep === 2}">Product documentation
+                    [ngClass]="{'active-servicos': currentStep === 2}">AWS, Azure e Google Cloud
                 </button>
             </div>
             <div class="servico-btn-item">
@@ -359,14 +367,14 @@
         </div>
         <div class="content">
             <div class="passo-item">
-                <div [ngClass]="getBoxClass()">
-                </div>
+                <img [ngClass]="getBoxClass()" loading="lazy">
+         
                 <div class="textos-caixa-servico">
                     <h1 class="titulo-caixa-servico">
                         {{ getTitle() }}
                     </h1>
                     <p class="texto-caixas">{{ getDescription() }}</p>
-                    <button class="btn-acao">Lorem Ipsum</button>
+                    <button class="btn-acao">Fazer orçamento</button>
                 </div>
             </div>
         </div>
@@ -384,8 +392,7 @@
         <swiper-container 
         #swiper 
         [slides-per-view]="slidesPerView" 
-        [space-between]="2" 
-        [breakpoints]="breakpoints" 
+        [breakpoints]="breakpointsServicos" 
         initial-slide="0"
         navigation="true"
         pagination="true"
@@ -478,7 +485,7 @@
         </div>
     </div>
     <div class="btn-acao-centro">
-        <button class="btn-acao">Lorem Ipsum</button>
+        <button class="btn-acao">Fazer orçamento</button>
     </div>
 </section>
 <section class="contato">
@@ -503,14 +510,14 @@
         </div>
     </div>
 </section>
-<section class="testemunhas">
+<section class="testemunhas" id="testemunhas">
 
     <div class="outros-servicos">
         <swiper-container 
         #swiper 
         [slides-per-view]="slidesPerView" 
-        [space-between]="2" 
-        [breakpoints]="breakpoints" 
+        [space-between]="0" 
+        [breakpoints]="breakpointsServicos" 
         initial-slide="0"
         navigation="true"
         pagination="true"
@@ -538,54 +545,76 @@
             </div>
         </swiper-slide>
         
-        <swiper-slide >
-           <div class="caixa-testemunhas" >
-                <div class="up-testemunhas">
-                    <div class="inf-testemunhas">
-                        <p class="nome-testemunha">Daniel Igor
-                        </p>
-                        <p class="cargo-testemunha">Cliente no Workana
-                        </p>
-                    </div>
-                    <div class="img-workana">
-                        <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
-                    </div>
-                </div>
-                <div class="bot-testemunhas">
-                    <p class="fala-testemunha">
-                        "Excelente profissional, ótima comunicação, entrega o projeto com muita qualidade."
-                    </p>
-                </div>
-            </div>
-        </swiper-slide>
         
         <swiper-slide >
-           <div class="caixa-testemunhas" >
-                <div class="up-testemunhas">
-                    <div class="inf-testemunhas">
-                        <p class="nome-testemunha">Daniel Igor
-                        </p>
-                        <p class="cargo-testemunha">Cliente no Workana
-                        </p>
-                    </div>
-                    <div class="img-workana">
-                        <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
-                    </div>
-                </div>
-                <div class="bot-testemunhas">
-                    <p class="fala-testemunha">
-                        "Excelente profissional, ótima comunicação, entrega o projeto com muita qualidade."
-                    </p>
-                </div>
-            </div>
-        </swiper-slide>
+            <div class="caixa-testemunhas" >
+                 <div class="up-testemunhas">
+                     <div class="inf-testemunhas">
+                         <p class="nome-testemunha">Jeam Pierre Kuhl
+                         </p>
+                         <p class="cargo-testemunha">Cliente no Workana
+                         </p>
+                     </div>
+                     <div class="img-workana">
+                         <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                     </div>
+                 </div>
+                 <div class="bot-testemunhas">
+                     <p class="fala-testemunha">
+                        "Simplesmente um baita profissional. Ele sabe o que está fazendo e é muito rápido, prestativo e competente. RECOMENDO 100%"
+                     </p>
+                 </div>
+             </div>
+         </swiper-slide>
 
+         <swiper-slide >
+            <div class="caixa-testemunhas" >
+                 <div class="up-testemunhas">
+                     <div class="inf-testemunhas">
+                         <p class="nome-testemunha">Arthur Paiva
+                         </p>
+                         <p class="cargo-testemunha">Cliente no Workana
+                         </p>
+                     </div>
+                     <div class="img-workana">
+                         <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                     </div>
+                 </div>
+                 <div class="bot-testemunhas">
+                     <p class="fala-testemunha">
+                        "É aquela famosa historia do Mecânico que sabe qual parafuso apertar. Muito rapido, pratico e eficiente"
+                     </p>
+                 </div>
+             </div>
+         </swiper-slide>
+
+
+         <swiper-slide >
+            <div class="caixa-testemunhas" >
+                 <div class="up-testemunhas">
+                     <div class="inf-testemunhas">
+                         <p class="nome-testemunha">Guilherme Engel
+                         </p>
+                         <p class="cargo-testemunha">Cliente no Workana
+                         </p>
+                     </div>
+                     <div class="img-workana">
+                         <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                     </div>
+                 </div>
+                 <div class="bot-testemunhas">
+                     <p class="fala-testemunha">
+                        "Próatividade e senso de urgência do prestador de serviço foi crucial para o bom sentimento sobre o trabalho além, claro, da entrega. Excelente, faremos novos negócios."
+                     </p>
+                 </div>
+             </div>
+         </swiper-slide>
         
         <swiper-slide >
            <div class="caixa-testemunhas" >
                 <div class="up-testemunhas">
                     <div class="inf-testemunhas">
-                        <p class="nome-testemunha">Daniel Igor
+                        <p class="nome-testemunha">Rui de Paula
                         </p>
                         <p class="cargo-testemunha">Cliente no Workana
                         </p>
@@ -596,7 +625,7 @@
                 </div>
                 <div class="bot-testemunhas">
                     <p class="fala-testemunha">
-                        "Excelente profissional, ótima comunicação, entrega o projeto com muita qualidade."
+                        "Profissional muito capaz, propõe soluções, cumpre com o que promete."
                     </p>
                 </div>
             </div>

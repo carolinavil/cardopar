@@ -2,6 +2,10 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
+  "cli": {
+    "cache": {
+      "enabled": false
+    }},
   "projects": {
     "cardopar4": {
       "projectType": "application",
@@ -28,7 +32,7 @@
             ],
             "styles": [
            
-              
+           
             ],
             "scripts": [
          
@@ -94,7 +98,7 @@
               "src/assets"
             ],
             "styles": [
-           
+       
             ],
             "scripts": [
              

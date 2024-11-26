@@ -20,11 +20,15 @@ export class IndexComponent implements AfterViewInit {
     { src: 'assets/img/SLIDE5.svg', alt: 'Imagem 3' },
     { src: 'assets/img/SLIDE5.svg', alt: 'Imagem 4' }
   ];
-  slidesToShow = 1;
+  slidesToShow = 2;
   currentStep: number = 1;
-  slidesPerView = 1; // Default value for small screens
-  slideServicos= 1.1
+  slidesPerView = 2; // Default value for small screens
+  slideServicos=2
   breakpoints = {
+    100: {
+      slidesPerView:1.2, // Tablets
+      spaceBetween: 0,
+    },
     640: {
       slidesPerView: 2, // Tablets
       spaceBetween: 20,
@@ -32,6 +36,33 @@ export class IndexComponent implements AfterViewInit {
     1024: {
       slidesPerView: 3, // Desktop
       spaceBetween: 30,
+    },
+  };
+
+  breakpointsServicos = {
+    100: {
+      slidesPerView:1.2, // Tablets
+      spaceBetween: 0,
+    },
+    640: {
+      slidesPerView: 3, // Tablets
+      spaceBetween: 0,
+    },
+    1024: {
+      slidesPerView: 4, // Desktop
+      spaceBetween: 0,
+    },
+  };
+ 
+ 
+  breakpointsMarcas = {
+    640: {
+      slidesPerView: 2, // Tablets
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView:4, // Desktop
+      spaceBetween: 0,
     },
   };
 

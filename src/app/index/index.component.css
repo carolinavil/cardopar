@@ -13,6 +13,20 @@
   font-display: swap
 }
 
+html {
+  scroll-behavior: smooth;
+  
+}
+
+a{
+  text-decoration: none;
+}
+
+
+.caixa-testemunhas {
+  height: 146px;
+}
+
 ::ng-deep * {
   margin: 0;
   padding: 0;
@@ -244,6 +258,18 @@ header.header {
 }
 
 @media screen and (min-width:900px) {
+
+  .back-caixa-servico {
+    margin: 0;
+    width: 350px;
+    height: 200px;
+}
+
+.textos-caixa-servico{
+  width: 400px;
+
+}
+
   .carousel-container.mobile{
     display: none;
   }
@@ -371,6 +397,10 @@ section.testemunhas {
 }
 @media (max-width: 768px) {
 
+  .back-caixa-servico{
+    width: 100%;
+  }
+
   .caixa-image{
     display: none;
     margin-bottom: 0;
@@ -395,12 +425,21 @@ height: 100%;
 
 
 .caixa-testemunhas {
-  height: 165px;
   display: flex;
   justify-content: center;
   align-items: start;
   flex-flow: column;
 }
+
+
+::ng-deep.swiper-horizontal {
+  bottom: 0em!important;
+  /* top: var(--swiper-pagination-top, auto); */
+  left: 0;
+  width: 100%;
+}
+
+
 
 
 
@@ -623,12 +662,12 @@ margin: 0.5em 0;
 .servicos swiper-slide{
   display: flex;
   justify-content: center;
-  margin-right: 0!important;
+  /* margin-right: -3em; */
 }
 
-.outros-servicos swiper-container{
+/* .outros-servicos swiper-container{
   margin-left: 1em;
-}
+} */
 
 
 .active-servicos{
@@ -751,7 +790,6 @@ section.passos {
 
 .back-caixa-servico {
   height:200px;
-  width: 100%;
   margin: 0 0 2em 0;
   border-radius: 11px;
   height: 178px;
@@ -951,18 +989,19 @@ span.numero-passo {
 
 .back-caixa-servico {
   margin: 0;
-  width: 40%;
   height: 200px;
 }
 
 .textos-caixa-servico {
   margin-left: 1em;
-  width: 45%;
+  /* width: 45%; */
   display: flex;
   align-items: start;
   justify-content: center;
   flex-flow: column;
 }
+
+
 
 .outros-servicos swiper-slide {
   height: 182px;
@@ -1044,20 +1083,20 @@ h1.titulo-caixa-testemunhas {
 }
 
 .caixa-um{
-  background-image: url('../../assets/img/caixaum.svg');
+  background-image: url('../../assets/img/Group-175_resized_compressed_compressed.webp');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .caixa-dois{
-  background-image: url('../../assets/img/caixadois.svg');
+  background-image: url('../../assets/img/caixadois\ \(2\)_resized_compressed.webp');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 
 .caixa-tres{
-  background-image: url('../../assets/img/caixatres.svg');
+  background-image: url('../../assets/img/caixatres\ \(1\)_resized_compressed.webp');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1065,6 +1104,15 @@ h1.titulo-caixa-testemunhas {
 button.btn-acao.btn-header {
   display: none;
 }
+
+
+::ng-deep.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: -6px!important;
+}
+
+
+
+
 
 
 img.swiper-lazy{
@@ -1144,21 +1192,23 @@ p.descricao-os {
   font-size: 14px;
 }
 
-.outros-servicos .carousel-slide:nth-child(even) {
-  background:  #195a97;
+
+
+swiper-slide:nth-child(odd) .carousel-slide {
+  background-color: #195a97; /* Cor para os slides ímpares */
 }
 
-.outros-servicos .carousel-slide:nth-child(odd) {
-  background:  #20195F
+swiper-slide:nth-child(even) .carousel-slide {
+  background-color:   #20195F; /* Cor para os slides pares */
 }
 
 
 .outros-servicos .carousel-slide{
-  height: 142px;
-  width: 208px;
+  width: 100%;
   margin-right: 1em;
   border-radius: 11px;
   padding: 1.5em 1em;
+  height: 122px;
 }
 
 
