@@ -13,7 +13,58 @@
   font-display: swap
 }
 
-html {
+.icone-item{
+  width: 24px;
+  height: 24px;
+}
+.btn-acao a{
+  color: #195a97;
+}
+
+.btn-acao-escuro a{
+  color: white;
+}
+.btn-acao {
+ 
+  background-color: #195a9700;
+  cursor: pointer;
+  padding: 0.9em 2em;
+  border-radius: 9px;
+  /* border: none; */
+  font-size: 16px;
+  text-align: start;
+  font-family: "Prometo Trial Md", sans-serif;
+  margin-top: 2em;
+  font-weight: 700;
+  border: 2px solid #195a97;
+}
+
+.sobre-nos{
+  padding-bottom: 3em;
+}
+
+
+
+
+
+
+
+
+
+
+
+.btn-acao-escuro {
+  color: white;
+  background-color: #195a97;
+  margin-top: 2em;
+  font-weight: 400;
+}
+
+
+
+
+
+::ng-deep html {
   scroll-behavior: smooth;
   
 }
@@ -22,10 +73,10 @@ a{
   text-decoration: none;
 }
 
-
-.caixa-testemunhas {
-  height: 146px;
+.enfase-texto{
+  font-weight: 700;
 }
+
 
 ::ng-deep * {
   margin: 0;
@@ -258,6 +309,31 @@ header.header {
 }
 
 @media screen and (min-width:900px) {
+  .caixa-passos-desktop {
+    width: 42%;
+  }
+
+  .btn-acao .btn-acao-escuro:hover{
+    background-color: #ffffff00;
+    color: #195a97;
+    border: 2px solid #195a97;
+    transition: 0.2s;
+  }
+  
+
+  .btn-acao:hover{
+    background-color: #195a97;
+    transition: 0.2s;
+  }
+  
+
+  .btn-acao a:hover{
+    color: white;
+  }
+
+  .btn-acao-escuro a:hover{
+    color: #195a97;
+  }
 
   .back-caixa-servico {
     margin: 0;
@@ -476,7 +552,7 @@ height: 100%;
 .marcas{
 padding: 1em;
 }
-.btn-acao {
+/* .btn-acao {
   color: white;
   background-color: #20195F;
   padding: 0.5em 3em;
@@ -487,7 +563,7 @@ padding: 1em;
   font-family: 'Prometo Trial Md', sans-serif;
   margin-top: 2em;
 
-}
+} */
 
 
 
@@ -604,9 +680,14 @@ section.passos{
 }
 
 p.sublista-texto {
+  /* margin: 1.5em 0; */
   font-weight: 500;
   font-size: 15px;
   color: #313131;
+}
+
+ul.sublista-itens {
+  margin-top: 2em;
 }
 
 .sublista-item{
@@ -615,9 +696,17 @@ margin: 0.5em 0;
 }
 
 .sublista-diferencial {
-  width: 65%;
+  width: 75%;
   margin: 1.5em auto;
 
+}
+
+li.sublista-item {
+  display: flex;
+}
+
+img.icone-item {
+  margin-right: 0.5em;
 }
 
 
@@ -739,6 +828,7 @@ li.lista-contato-item.texto-caixas {
   margin: 0 0.5em;
   border-radius: 10px;
   padding: 1em;
+  height: 160px;
 }
 
 .up-testemunhas {
@@ -959,14 +1049,20 @@ span.numero-passo {
   font-size: 19px;
 }
 
+.diferenciais{
+  padding-bottom: 2em;
+}
+
 .lista-diferenciais {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2em;
+  margin-bottom: -3em;
 }
 
-
+.testemunhas swiper-container {
+  height: 200px;
+}
 
 .conteudo-servicos-desktop {
   display: flex;
@@ -1192,6 +1288,11 @@ p.descricao-os {
   font-size: 14px;
 }
 
+.contato-icone{
+  width: 24px;
+  height: 24px;
+}
+
 
 
 swiper-slide:nth-child(odd) .carousel-slide {
@@ -1214,4 +1315,8 @@ swiper-slide:nth-child(even) .carousel-slide {
 
 .servico-btn-item{
   width: 85%;
+}
+
+@media screen and (min-width:900px) {
+  
 }

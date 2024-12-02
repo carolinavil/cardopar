@@ -59,7 +59,7 @@
 
                 </div>
             </div>
-            <img src="../../assets/img/seta.svg" alt="" class="icone-banner" loading="lazy" data-aos-duration="800">
+            <img src="../../assets/img/seta.svg" alt="img" class="icone-banner" loading="lazy" data-aos-duration="800">
 
         </div>
     </div>
@@ -70,13 +70,13 @@
     </video>
 </section>
 
-<section class="marcas" id="parceiros">
+<section class="">
     <h1 class="titulo-caixas">Confiam em nós</h1>
     <swiper-container 
     #swiper 
     [slides-per-view]="slidesPerView" 
     [space-between]="20" 
-    [breakpoints]="breakpointsMarcas" 
+    [breakpoints]="breakpoints" 
     initial-slide="0"
     navigation="true"
     pagination="true"
@@ -89,7 +89,7 @@ autoplay="true"
   >
 
     <swiper-slide *ngFor="let image of images">
-      <img [src]="image.src" [alt]="image.alt" style="width: 100%; height: 50px;" loading="lazy"/>
+      <img [src]="image.src" [alt]="image.alt" style="width: 100%; height: 50px;" loading="lazy" alt="img"/>
     </swiper-slide>
   </swiper-container>
   </section>
@@ -116,13 +116,13 @@ autoplay="true"
 
             </p>
 
-            <button class="btn-acao">Fazer orçamento</button>
+            <button class="btn-acao"><a href="https://wa.me/cardopar">Fazer orçamento</a></button>
         </div>
     </div>
 
 
     <div class="caixa-imagem">
-        <img src="../../assets/img/img-desktops- (1).webp" alt="" class="imagem-sobre-nos" loading="lazy">
+        <img src="../../assets/img/img-desktops- (1).webp" alt="i,g" class="imagem-sobre-nos" loading="lazy">
     </div>
 
 </section>
@@ -136,7 +136,7 @@ autoplay="true"
                 <div class="titulos-caixa">
                     <h1 class="titulo-caixas">Iniciando seu atendimento</h1>
                     <h2 class="subtitulo-caixas">
-                        Estamos aqui para ajudar a transformar suas ideias em realidade. Comece seu atendimento conosco e conte com nossa equipe em cada etapa do processo.
+                       Comece seu atendimento conosco seguindo esses passos e conte com nossa equipe em cada etapa do processo.
                     </h2>
                 </div>
             </div>
@@ -162,11 +162,11 @@ autoplay="true"
                     <div class="titulo-passo">Encontre o serviço desejado</div>
                     <div class="caixa-passo">
                         <div class="img-passo">
-                            <img src="../../assets/img/passo1 (1).webp" alt="" loading="lazy">
+                            <img src="../../assets/img/passo1 (1).webp" alt="i,g" loading="lazy">
                         </div>
 
                         <div class="texto-passo">
-                            Aqui, o usuário pode explorar os diferentes serviços oferecidos pela empresa, escolhendo o que mais se adequa às suas necessidades.
+                            Explore os diferentes serviços oferecidos pela Cardopar, escolhendo o que mais se adequa às necessidades do seu negócio.
                         </div>
                     </div>
                 </div>
@@ -175,11 +175,11 @@ autoplay="true"
                     <div class="titulo-passo">  Fale com nossa equipe e solicite seu orçamento.</div>
                     <div class="caixa-passo">
                         <div class="img-passo">
-                            <img src="../../assets/img/passo2 (1).webp" alt="" loading="lazy">
+                            <img src="../../assets/img/passo2 (1).webp" alt="i,g" loading="lazy">
                         </div>
 
                         <div class="texto-passo">
-                            Uma vez que o usuário encontrou o serviço desejado, ele pode entrar em contato diretamente com a equipe, tirar dúvidas e solicitar um orçamento personalizado.
+                            Após encontrar o serviço desejado, entre em contato diretamente com a equipe, tire dúvidas se necessário e solicite um orçamento personalizado.
                         </div>
                     </div>
                 </div>
@@ -188,11 +188,11 @@ autoplay="true"
                     <div class="titulo-passo">Finalize o atendimento</div>
                     <div class="caixa-passo">
                         <div class="img-passo">
-                            <img src="../../assets/img/Icon_Nuvem1 1.webp" alt="" loading="lazy">
+                            <img src="../../assets/img/Icon_Nuvem1 1.webp" alt="img" loading="lazy">
                         </div>
 
                         <div class="texto-passo">
-                            Após o orçamento ser aprovado e todas as questões resolvidas, o usuário pode concluir o atendimento e finalizar o processo.
+                            Tudo pronto! Após a aprovação do orçamento e a conclusão de todas as etapas do atendimento, daremos início à realização do seu projeto com todo o cuidado e dedicação que ele merece.
                         </div>
                     </div>
                 </div>
@@ -214,7 +214,7 @@ autoplay="true"
 
 
     <div class="btn-acao-centro">
-        <button class="btn-acao">Fazer orçamento</button>
+        <button class="btn-acao btn-acao-escuro"><a href="https://wa.me/cardopar">Fazer orçamento</a></button>
     </div>
 
 </section>
@@ -226,7 +226,8 @@ autoplay="true"
             <div class="titulos-caixa">
                 <h1 class="titulo-caixas">Nossos diferenciais</h1>
                 <p class="subtitulo-caixas">
-                    Desenvolvemos soluções inovadoras, focadas em resultados. Nosso time é comprometido com a excelência, sempre buscando melhorar os processos e entregar valor real aos nossos clientes. Acreditamos que o futuro é construído com a união entre tecnologia, criatividade e dedicação.
+                    Desenvolvemos soluções inovadoras, focadas em resultados. Nossa abordagem se sustenta em três pilares principais:
+                    <span class="enfase-texto">inovação, especialização e compromisso</span>. Juntos, eles guiam cada etapa do nosso trabalho para garantir o seu sucesso.
                 </p>
             </div>
         </div>
@@ -234,19 +235,19 @@ autoplay="true"
         <div class="lista-diferenciais">
             <div class="diferencial">
                 <div class="titulo-diferencial">
-                  <img src="../../assets/img/1 (2).webp" alt="" loading="lazy" class="icone-diferencial">
+                  <img src="../../assets/img/1 (2).webp" alt="img" loading="lazy" class="icone-diferencial">
                     <div class="escrito-titulo-diferencial">Inovação Tecnológica</div>
                 </div>
                 <div class="sublista-diferencial">
                     <ul class="sublista-itens">
                         <li class="sublista-item">
-                            <p class="sublista-texto">Desenvolvimento ágil com tecnologias de ponta</p>
+                           <img src="../../assets/img/Approval.svg" class="icone-item" alt="img" loading="lazy"> <p class="sublista-texto">Desenvolvimento ágil com tecnologias de ponta</p>
                         </li>
                         <li class="sublista-item">
-                            <p class="sublista-texto">Integração contínua e entrega rápida</p>
+                            <img src="../../assets/img/Approval.svg" class="icone-item" alt="img" loading="lazy"> <p class="sublista-texto">Integração contínua e entrega rápida</p>
                         </li>
                         <li class="sublista-item">
-                            <p class="sublista-texto">Utilização de metodologias ágeis para resultados eficazes</p>
+                            <img src="../../assets/img/Approval.svg" class="icone-item" alt="img" loading="lazy">  <p class="sublista-texto">Utilização de metodologias ágeis para resultados eficazes</p>
                         </li>
                     </ul>
                 </div>
@@ -254,19 +255,21 @@ autoplay="true"
 
             <div class="diferencial diferencial2">
                 <div class="titulo-diferencial">
-                 <img src="../../assets/img/2 (1).webp" alt="" loading="lazy" class="icone-diferencial">
+                 <img src="../../assets/img/2 (1).webp" alt="img" loading="lazy" class="icone-diferencial">
                     <div class="escrito-titulo-diferencial">Equipe Especializada</div>
                 </div>
+                <!-- &check; -->
+
                 <div class="sublista-diferencial">
                     <ul class="sublista-itens">
                         <li class="sublista-item">
-                            <p class="sublista-texto">Profissionais experientes e qualificados</p>
+                            <img src="../../assets/img/Approval.svg" class="icone-item" alt="img" loading="lazy">   <p class="sublista-texto">Profissionais experientes e qualificados</p>
                         </li>
                         <li class="sublista-item">
-                            <p class="sublista-texto">Capacidade de adaptação às necessidades do cliente</p>
+                            <img src="../../assets/img/Approval.svg" class="icone-item" alt="img" loading="lazy">   <p class="sublista-texto">Capacidade de adaptação às necessidades do cliente</p>
                         </li>
                         <li class="sublista-item">
-                            <p class="sublista-texto">Formação contínua para acompanhar as tendências do mercado</p>
+                            <img src="../../assets/img/Approval.svg" class="icone-item" alt="img" loading="lazy">   <p class="sublista-texto">Formação contínua para acompanhar as tendências do mercado</p>
                         </li>
                     </ul>
                 </div>
@@ -274,19 +277,19 @@ autoplay="true"
 
             <div class="diferencial">
                 <div class="titulo-diferencial">
-               <img src="../../assets/img/3 (1).webp" alt="" loading="lazy" class="icone-diferencial">
+               <img src="../../assets/img/3 (1).webp" alt="img" loading="lazy" class="icone-diferencial">
                     <div class="escrito-titulo-diferencial">Compromisso com a Qualidade</div>
                 </div>
                 <div class="sublista-diferencial">
                     <ul class="sublista-itens">
                         <li class="sublista-item">
-                            <p class="sublista-texto">Atenção aos detalhes em cada etapa do processo</p>
+                            <img src="../../assets/img/Approval.svg" class="icone-item" alt="img" loading="lazy">      <p class="sublista-texto">Atenção aos detalhes em cada etapa do processo</p>
                         </li>
                         <li class="sublista-item">
-                            <p class="sublista-texto">Garantia de entregas dentro dos padrões de excelência</p>
+                            <img src="../../assets/img/Approval.svg" class="icone-item" alt="img" loading="lazy">   <p class="sublista-texto">Garantia de entregas dentro dos padrões de excelência</p>
                         </li>
                         <li class="sublista-item">
-                            <p class="sublista-texto">Feedback constante para melhoria contínua</p>
+                            <img src="../../assets/img/Approval.svg" class="icone-item" alt="img" loading="lazy">   <p class="sublista-texto">Feedback constante para melhoria contínua</p>
                         </li>
                     </ul>
                 </div>
@@ -294,7 +297,7 @@ autoplay="true"
         </div>
 
         <div class="btn-acao-centro">
-            <button class="btn-acao">Saiba Mais</button>
+            <button class="btn-acao"><a href="https://wa.me/cardopar">Saiba mais</a></button>
         </div>
     </div>
 </section>
@@ -340,7 +343,7 @@ autoplay="true"
 
 <swiper-slide >
     <div ngxSlickItem class="slide" (click)="selectStep(3)" class="btn-servicos"
-    [ngClass]="{'active-servicos': currentStep === 3}">Product documentation
+    [ngClass]="{'active-servicos': currentStep === 3}">Escalamento Automático
 </div>
 </swiper-slide >
 
@@ -361,25 +364,25 @@ autoplay="true"
             </div>
             <div class="servico-btn-item">
                 <button ngxSlickItem class="slide" (click)="selectStep(3)" class="btn-servicos"
-                    [ngClass]="{'active-servicos': currentStep === 3}">Product documentation
+                    [ngClass]="{'active-servicos': currentStep === 3}">Escalamento Automático
                 </button>
             </div>
         </div>
         <div class="content">
             <div class="passo-item">
-                <img [ngClass]="getBoxClass()" loading="lazy">
+                <img [ngClass]="getBoxClass()" loading="lazy" alt="img">
          
                 <div class="textos-caixa-servico">
                     <h1 class="titulo-caixa-servico">
                         {{ getTitle() }}
                     </h1>
                     <p class="texto-caixas">{{ getDescription() }}</p>
-                    <button class="btn-acao">Fazer orçamento</button>
+                    <button class="btn-acao btn-acao-escuro"><a href="https://wa.me/cardopar">Fazer orçamento</a></button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-alinhado">
+    <div class="outros-servico container-alinhado">
         <div class="titulos-caixa">
             <div class="caixa-textos">
                 <h1 class="titulo-caixas titulo-contato">Outros serviços</h1>
@@ -398,16 +401,7 @@ autoplay="true"
         pagination="true"
         [autoplay]="true"
       >
-    
-        <swiper-slide >
-            <div class="carousel-slide" >
-                <div class="caixa-os">
-                    <h1 class="titulo-os">Especialização em WordPress</h1>
-                    <p class="descricao-os">Otimização e configuração de ambientes WordPress, melhorando desempenho e segurança com suporte contínuo.
-                    </p>
-                </div>
-              </div>
-        </swiper-slide>
+
         
         <swiper-slide >
             <div class="carousel-slide" >
@@ -453,18 +447,6 @@ autoplay="true"
         </swiper-slide>
 
 
-
-        <swiper-slide >
-            <div class="carousel-slide" >
-                <div class="caixa-os">
-                    <h1 class="titulo-os">Escalamento Automático</h1>
-                    <p class="descricao-os">Implementamos soluções que escalam automaticamente, atendendo picos de demanda e otimizando custos conforme o uso.
-                    </p>
-                </div>
-              </div>
-        </swiper-slide>
-
-
         <swiper-slide >
             <div class="carousel-slide" >
                 <div class="caixa-os">
@@ -485,7 +467,7 @@ autoplay="true"
         </div>
     </div>
     <div class="btn-acao-centro">
-        <button class="btn-acao">Fazer orçamento</button>
+       <button class="btn-acao"><a href="https://wa.me/cardopar">Fazer orçamento</a></button>
     </div>
 </section>
 <section class="contato">
@@ -499,29 +481,28 @@ autoplay="true"
             </div>
             <ul class="lista-contato caixa-flex-contatos">
                 <li class="lista-contato-item texto-caixas"><span class="contato-icone"><img
-                            src="../../assets/img/WhatsApp.svg" loading="lazy" alt="a"></span> Learn here. Dream
-                    here. Develop </li>
+                            src="../../assets/img/WhatsApp.svg" loading="lazy" alt="a"></span> <span >Para falar conosco via WhatsApp,<span class="enfase-texto"> envie uma mensagem aqui </span></span> </li>
+                <li class="lista-contato-item texto-caixas"><span class="contato-icone">
+                   <img
+                            src="../../assets/img/At sign.svg" loading="lazy" alt="b"></span>  <span > Se preferir, entre em contato por e-mail no endereço   <span class="enfase-texto">support&#64;cardopar.com</span> </span></li>
                 <li class="lista-contato-item texto-caixas"><span class="contato-icone"><img
-                            src="../../assets/img/At sign.svg" loading="lazy" alt="b"></span>Learn here. Dream
-                    here. Develop here. Learn here.</li>
-                <li class="lista-contato-item texto-caixas"><span class="contato-icone"><img
-                            src="../../assets/img/Phone.svg" loading="lazy" alt="c"></span>faleconoscocardopar.com</li>
+                            src="../../assets/img/Phone.svg" loading="lazy" alt="c"></span><span >Ou ligue para: <span class="enfase-texto">+55 12 97402-0387</span></span></li>
             </ul>
         </div>
     </div>
 </section>
 <section class="testemunhas" id="testemunhas">
 
-    <div class="outros-servicos">
+    <div class="testemunhas-slides">
         <swiper-container 
         #swiper 
         [slides-per-view]="slidesPerView" 
         [space-between]="0" 
-        [breakpoints]="breakpointsServicos" 
+        [breakpoints]="breakpoints" 
         initial-slide="0"
         navigation="true"
-        pagination="true"
-        [autoplay]="true"
+        pagination="false"
+        loop="true"
       >
     
         <swiper-slide >
@@ -534,7 +515,7 @@ autoplay="true"
                         </p>
                     </div>
                     <div class="img-workana">
-                        <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                        <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="img" loading="lazy">
                     </div>
                 </div>
                 <div class="bot-testemunhas">
@@ -556,7 +537,7 @@ autoplay="true"
                          </p>
                      </div>
                      <div class="img-workana">
-                         <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                         <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="img" loading="lazy">
                      </div>
                  </div>
                  <div class="bot-testemunhas">
@@ -577,7 +558,7 @@ autoplay="true"
                          </p>
                      </div>
                      <div class="img-workana">
-                         <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                         <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="img" loading="lazy">
                      </div>
                  </div>
                  <div class="bot-testemunhas">
@@ -599,7 +580,7 @@ autoplay="true"
                          </p>
                      </div>
                      <div class="img-workana">
-                         <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                         <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="img" loading="lazy">
                      </div>
                  </div>
                  <div class="bot-testemunhas">
@@ -620,7 +601,7 @@ autoplay="true"
                         </p>
                     </div>
                     <div class="img-workana">
-                        <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="" loading="lazy">
+                        <img src="../../assets/img/marca_workana 1 (1)-min.svg" alt="img" loading="lazy">
                     </div>
                 </div>
                 <div class="bot-testemunhas">

@@ -9,11 +9,6 @@ import { isPlatformBrowser } from '@angular/common';
 export class IndexComponent implements AfterViewInit {
   slidesPerViewQuemSomos = 3;
   menuOpen = false;
-  mobileCard = false;
-  currentIndex = 0;
-  mobile = false;
-  mobileSlides = 100;
-  totalImages = 4;
   images = [
     { src: 'assets/img/SLIDE3 (1).svg', alt: 'Imagem 1' },
     { src: 'assets/img/SLIDE4.svg', alt: 'Imagem 2' },
@@ -66,12 +61,12 @@ export class IndexComponent implements AfterViewInit {
     },
   };
 
-  constructor(private el: ElementRef, private renderer: Renderer2, @Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor( @Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
-      this.setSlidesToShow();
-      window.addEventListener('resize', () => this.setSlidesToShow());
+    
+     
     }
   }
 
@@ -81,49 +76,12 @@ export class IndexComponent implements AfterViewInit {
     }
   }
 
-  setSlidesToShow() {
-    if (window.innerWidth <= 768) {
-      this.mobile = true;
-      this.mobileSlides = 75;
-    } else {
-      this.mobile = false;
-      this.mobileSlides = 100;
-    }
-  }
+
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
 
-  // Mantendo o método getTransform conforme solicitado
-  getTransform() {
-    return `translateX(${-this.currentIndex * (100 / this.slidesToShow)}%)`;
-  }
-
-  getTransformOs() {
-    return `translateX(${-this.currentIndex * (85 / this.slidesToShow)}%)`;
-  }
-
-  prevImage() {
-    this.currentIndex = (this.currentIndex - 1 + this.totalImages) % this.totalImages;
-    this.currentStep = this.currentStep === 1 ? 3 : this.currentStep - 1;
-  }
-
-  nextImage() {
-    this.currentIndex = (this.currentIndex + 1) % this.totalImages;
-    this.currentStep = (this.currentStep % 3) + 1;
-  }
-
-  adjustSlidesPerView(windowWidth: number) {
-    this.mobileCard = false;
-    if (windowWidth <= 2000) {
-      this.slidesPerViewQuemSomos = 2;
-      if (windowWidth <= 960) {
-        this.mobileCard = true;
-        this.slidesPerViewQuemSomos = 1;
-      }
-    }
-  }
 
   // Método selectStep mantido conforme solicitado
   selectStep(step: number) {
@@ -148,9 +106,9 @@ export class IndexComponent implements AfterViewInit {
       case 1:
         return 'Especialistas em WordPress';
       case 2:
-        return 'Especialistas em Segurança';
+        return 'AWS, Azure e Google Cloud';
       case 3:
-        return 'Especialistas em Performance';
+        return 'Escalamento Automático';
       default:
         return '';
     }
@@ -161,9 +119,9 @@ export class IndexComponent implements AfterViewInit {
       case 1:
         return 'Implementamos medidas de segurança robustas para proteger seus dados e garantir sua privacidade absoluta na internet.';
       case 2:
-        return 'Oferecemos soluções avançadas de segurança para proteger seu site de ameaças.';
+        return 'Oferecemos soluções em Google Cloud, Microsoft Azure e AWS, adaptando serviços às necessidades do cliente.';
       case 3:
-        return 'Otimização de performance para uma experiência de usuário mais rápida e eficiente.';
+        return 'Nossas soluções se ajustam automaticamente conforme a demanda aumenta ou diminui, garantindo eficiência e redução de custos à medida que você utiliza mais ou menos recursos.';
       default:
         return '';
     }
